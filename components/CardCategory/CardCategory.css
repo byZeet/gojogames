@@ -1,0 +1,67 @@
+.image-container {
+    position: relative;
+    width: 400px; /* Cambiar el ancho */
+    height: 225px; /* Cambiar la altura */
+}
+
+.image-container {
+    position: relative;
+}
+
+.text-container {
+    position: absolute;
+    top: 30px; /* Ajusta la distancia desde la parte superior */
+    right: 10px; /* Ajusta la distancia desde el lado derecho */
+    padding: 5px 10px; /* Espaciado interior del contenedor de texto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.text-container p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    color: white; /* Color del texto */
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+}
+
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para cubrir todo el contenedor manteniendo la proporción de aspecto */
+    transition: filter 0.3s ease; /* Transición suave para el cambio de filtro */
+}
+
+.image-container:hover .background-image {
+    filter: brightness(50%); /* Aplica el efecto de oscurecimiento al hacer hover en cualquier parte de la imagen */
+}
+
+.card-container {
+    position: absolute;
+    bottom: 0.5px; /* Ajusta verticalmente */
+    left: 40%; /* Ajusta horizontalmente */
+    transform: translateX(-50%);
+    width: 70%; /* Ajusta el ancho según tus necesidades */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    border-radius: 10px; /* Ajusta según el estilo deseado */
+    overflow: hidden; /* Para ocultar partes de la imagen que puedan estar fuera del contenedor */
+    transition: transform 0.3s ease; /* Agrega una transición para suavizar el cambio */
+    transform-origin: bottom center; /* Establece el origen de la transformación en la parte inferior del contenedor */
+}
+
+.custom
+
+.image-container:hover .card-container,
+.background-image:hover ~ .card-container {
+    transform: translate(-50%, 0%) scale(1.1); /* Escala la imagen al 110% y mantiene la posición inferior */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px; /* Reducir el espacio entre elementos */
+    justify-content: center; /* Centrar el grid horizontalmente */
+    align-items: center; /* Centrar el grid verticalmente */
+}
