@@ -56,7 +56,7 @@ export const CardCategory = () => {
     {/* ARCADE */}
     <div className="image-container">
         <Image src={wallpaperarcade} alt='' width={425} height={240} className="background-image"/>
-        <div className="card-container">
+        <div className="card-container custom-arcade">
             <Image src={arcademain} alt='' className="foreground-image"/>
         </div>
         <div className="text-container">
@@ -76,7 +76,7 @@ export const CardCategory = () => {
     {/* INDIES */}
     <div className="image-container">
         <Image src={wallpaperindie} alt='' width={425} height={240} className="background-image"/>
-        <div className="card-container">
+        <div className="card-container custom-indies">
             <Image src={indiesmain} alt='' className="foreground-image"/>
         </div>
         <div className="text-container">
@@ -96,7 +96,7 @@ export const CardCategory = () => {
     {/* LUCHA */}
     <div className="image-container">
         <Image src={wallpaperlucha} alt='' width={425} height={240} className="background-image"/>
-        <div className="card-container">
+        <div className="card-container custom-lucha">
             <Image src={luchamain} alt='' className="foreground-image"/>
         </div>
         <div className="text-container">
@@ -106,7 +106,7 @@ export const CardCategory = () => {
     {/* RPG */}
     <div className="image-container">
         <Image src={wallpaperrpg} alt='' width={425} height={240} className="background-image"/>
-        <div className="card-container">
+        <div className="card-container custom-rpg">
             <Image src={rpgmain} alt='' className="foreground-image"/>
         </div>
         <div className="text-container">
@@ -116,7 +116,7 @@ export const CardCategory = () => {
     {/* COOP ONLINE */}
     <div className="image-container">
         <Image src={wallpapercoop} alt='' width={425} height={240} className="background-image"/>
-        <div className="card-container">
+        <div className="card-container custom-coop">
             <Image src={coopmain} alt='' className="foreground-image"/>
         </div>
         <div className="text-container">

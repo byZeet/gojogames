@@ -1,0 +1,19 @@
+.navbar {
+    /* Estilos comunes para el navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-top {
+    background-color: transparent;
+  }
+  
+  .navbar-scrolled {
+    background-color: #15151559; /* Ajusta el color y la opacidad según tus necesidades */
+    backdrop-filter: blur(5px); /* Aplica el desenfoque */
+  }
+  

@@ -39,6 +39,7 @@
 }
 
 .card-container {
+    pointer-events: none;
     position: absolute;
     bottom: 0.5px; /* Ajusta verticalmente */
     left: 40%; /* Ajusta horizontalmente */
@@ -51,7 +52,26 @@
     transform-origin: bottom center; /* Establece el origen de la transformación en la parte inferior del contenedor */
 }
 
-.custom
+.custom-coop {
+    width: 88%;
+}
+.custom-lucha {
+    width: 65%;
+}
+.custom-arcade {
+    width: 80%;
+}
+.custom-rpg {
+    width: 64%;
+}
+.custom-indies {
+    width: 65%;
+}
+.custom-simulacion {
+    left: 25%;
+    bottom: -10%;
+    width: 85%;
+}
 
 .image-container:hover .card-container,
 .background-image:hover ~ .card-container {
