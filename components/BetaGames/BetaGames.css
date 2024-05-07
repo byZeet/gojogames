@@ -1,0 +1,67 @@
+.container-general-beta {
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .left-section,
+  .right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .right-section {
+    flex-direction: column;
+  }
+
+  .controller-container {
+    position: relative;
+    overflow: visible;
+    width: 50%;
+    height: 330px; /* Reducir la altura del contenedor */
+  }
+  .controllerwhite img {
+    top: 200px;
+  }
+  
+  .controller-container img {
+    position: absolute;
+    bottom: 0; /* Ajustar la posición inferior */
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Cambiar a "contain" para asegurarse de que la imagen se ajuste dentro del contenedor sin recortarla */
+    animation: moveUpDown 3s infinite ease-in-out;
+  }
+
+  .controllerwhite {
+    position: absolute;
+    top: -10%;
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Cambiar a "contain" para asegurarse de que la imagen se ajuste dentro del contenedor sin recortarla */
+    animation: moveUpDown 3s infinite ease-in-out;
+  }
+  
+  @keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .custom-color-btn-betagames {
+    color: #eeeeee;
+  }
+  
+  .custom-beta-message {
+    margin-left: 650px;
+  }
+  
+  .custom-beta-message p {
+    color: #eeeeee;
+  }
+  
