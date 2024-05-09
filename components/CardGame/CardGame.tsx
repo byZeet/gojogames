@@ -3,12 +3,16 @@ import Image from 'next/image';
 import './CardGame.css'
 import heart from '../../public/assets/icons/heart.svg';
 import cartplus from '../../public/assets/icons/cart-plus.svg';
+import arrowright from '../../public/assets/icons/chevron-compact-right.svg'
 
 export const CardGame = () => {
   return (
     <main>
-      <div className='flex w-full justify-center mt-10 mb-10'>
-        <h1 className='text-3xl'>Nuevo y de tendencia</h1>
+      <div className='flex gap-2 ml-52 items-center'>
+        <h1 className='text-3xl'>Nuevo y Tendencias</h1>
+        <Image src={arrowright} alt=' ' width={36} height={36}/>
+      </div>
+      <div className='flex w-full justify-center mb-10'>
       </div>
       <div className='flex justify-center items-center mb-10'>
         <div className='w-fit h-fit grid grid-cols-4 grid-rows-3 gap-5'>

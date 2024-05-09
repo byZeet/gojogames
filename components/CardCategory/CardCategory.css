@@ -1,3 +1,11 @@
+.title-category {
+    transition: gap 0.3s ease; /* Transición suave */
+}
+
+.title-category:hover {
+    gap: 15px;
+}
+
 .image-container {
     position: relative;
     width: 400px; /* Cambiar el ancho */
@@ -17,10 +25,10 @@
 }
 
 .text-container p {
-    margin: 0; /* Elimina el margen predeterminado del párrafo */
-    color: white; /* Color del texto */
-    font-size: 24px; /* Tamaño de fuente */
-    font-weight: bold; /* Negrita */
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 
@@ -57,12 +65,14 @@
 }
 .custom-lucha {
     width: 65%;
+    margin-bottom: -0.1%;
 }
 .custom-arcade {
     width: 80%;
 }
 .custom-rpg {
-    width: 64%;
+    width: 60%;
+    margin-bottom: -0.2%;
 }
 .custom-indies {
     width: 65%;
@@ -73,15 +83,23 @@
     width: 85%;
 }
 
+.custom-gestion {
+    width: 62%;
+}
+.custom-deporte {
+    width: 43%;
+}
+
 .image-container:hover .card-container,
 .background-image:hover ~ .card-container {
-    transform: translate(-50%, 0%) scale(1.1); /* Escala la imagen al 110% y mantiene la posición inferior */
+    transform: translate(-50%, 0%) scale(103%); /* Escala la imagen al 110% y mantiene la posición inferior */
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 90px; /* Reducir el espacio entre elementos */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px; /* Reducir el espacio entre elementos */
     justify-content: center; /* Centrar el grid horizontalmente */
     align-items: center; /* Centrar el grid verticalmente */
 }
+

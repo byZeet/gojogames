@@ -6,7 +6,7 @@ import './BetaGames.css';
 
 export const Betagames = () => {
   return (
-    <main className='mt-20'>
+    <main className=''>
       <div className='container-general-beta'>
         <div className='left-section'>
           <div className='controller-container'>

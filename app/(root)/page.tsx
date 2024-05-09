@@ -9,11 +9,9 @@ export default function Home() {
   return (
     <main>
       <Slider/>
-        <CardGame/>
-        <br />
-        <br /><br />
-        <div className='flex justify-center'><CardCategory/></div>
-        <Betagames/>
+        <div className=''><CardGame/></div>
+        <div className=' mt-36 mb-20'><Betagames/></div>
+        <div className=''><CardCategory/></div>
 
     </main>
   )
