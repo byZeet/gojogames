@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import './CardGame.css'
 import heart from '../../public/assets/icons/heart.svg';
 import cartplus from '../../public/assets/icons/cart-plus.svg';
 import arrowright from '../../public/assets/icons/chevron-compact-right.svg'
+import './CardGame.scss'
 
 export const CardGame = () => {
   return (

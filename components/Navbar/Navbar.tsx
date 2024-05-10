@@ -6,7 +6,7 @@ import { UserButton, useUser } from '@clerk/nextjs'
 import Image from 'next/image';
 import person from '../../public/assets/icons/person.svg'
 import gojogameslogo from '../../public/assets/img/gojogameslogo.svg'
-import './Navbar.css'
+import './Navbar.scss'
 
 export default function Navbar() {
   const [isTop, setIsTop] = useState(true);

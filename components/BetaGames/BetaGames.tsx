@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import controllerblack from '../../public/assets/img/controllerblack.png';
 import controllerwhite from '../../public/assets/img/controllerwhite.png';
-import './BetaGames.css';
+import './BetaGames.scss';
 
 export const Betagames = () => {
   return (
