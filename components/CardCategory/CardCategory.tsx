@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link';
 import './CardCategory.scss';
 /**
   * WALLPAPERS IMPORTS
@@ -38,7 +39,9 @@ export const CardCategory = () => {
     <div>
 
 <div className='flex gap-1 ml-20 mb-28 items-center title-category'>
-        <h1 className='text-3xl'>Categorías</h1>
+        <Link href="/categorias">
+            <h1 className='text-3xl'>Categorías</h1>
+        </Link>
         <Image src={arrowright} alt=' ' width={36} height={36}/>
       </div>
 <div className='flex justify-center items-center flex-col'>

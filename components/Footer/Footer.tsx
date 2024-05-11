@@ -38,10 +38,10 @@ export const Footer = () => {
 
   return (
     <main>
-      <div className='footer-container' style={{ backgroundColor: '#1B1B1B' }}>
-        <div className='flex justify-center gap-52 w-full h-fit mt-20 p-10'>
+      <div className='footer-container ' style={{ backgroundColor: '#1B1B1B' }}>
+        <div className='flex justify-center gap-52 w-full h-fit mt-20 pt-10 pl-20 pr-20 '>
           <div className='gap-5'>
-            <h1>Sobre GojoGames</h1>
+            <h1 className=' text-xl'>Sobre GojoGames</h1>
             <div className='mt-3' style={{ color: '#7D7D7D' }}>
               <p>Sobre Nosotros</p>
               <p>Términos y Condiciones</p>
@@ -49,7 +49,7 @@ export const Footer = () => {
             </div>
           </div>
           <div>
-            <h1>Productos</h1>
+            <h1 className=' text-xl'>Productos</h1>
             <div className='mt-3' style={{ color: '#7D7D7D' }}>
               <p>Todos los productos</p>
               <p>Más vendidos</p>
@@ -57,7 +57,7 @@ export const Footer = () => {
             </div>
           </div>
           <div>
-            <h1>Comunidad</h1>
+            <h1 className=' text-xl'>Comunidad</h1>
             <div className='mt-3'  style={{ color: '#7D7D7D' }}>
               <p>FAQ</p>
               <p>Contacto</p>
@@ -65,7 +65,7 @@ export const Footer = () => {
             </div>
           </div>
           <div>
-            <h1>Métodos de pago</h1>
+            <h1 className=' text-xl'>Métodos de pago</h1>
             <div className='flex mt-3 gap-2'>
               <Image src={visa} alt=' ' width={50} height={50}/>
               <Image src={mastercard} alt=' ' width={50} height={50}/>
@@ -84,8 +84,8 @@ export const Footer = () => {
   <Image src={youtube} alt=' ' width={35} height={35} className='hover:transform hover:translate-y-[-8px] transition-transform duration-300'/>
 </div>
 
-        <hr className="mx-16" style={{ color: '#7D7D7D' }} /> {/* Aquí se añade la línea divisoria */}
-        <div className='mx-16'>
+        <hr className=" mx-20" style={{ color: '#7D7D7D' }} /> {/* Aquí se añade la línea divisoria */}
+        <div className='mx-20'>
           <div className='flex justify-between mt-5 pb-5 custom-color-rg'>
             <div>
               <h2 style={{ color: '#ffffff' }}>Copyright © 2024 GojoGames - All rights reserved</h2>
