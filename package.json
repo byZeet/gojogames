@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^5.0.5",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@nextui-org/button": "^2.0.29",
     "@nextui-org/react": "^2.3.2",
     "@nextui-org/system": "^2.1.1",

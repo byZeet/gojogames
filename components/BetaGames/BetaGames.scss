@@ -64,4 +64,91 @@
   .custom-beta-message p {
     color: #eeeeee;
   }
+
+  .button {
+    display: inline-block;
+    border-radius: 7px;
+    border: none;
+    background: #3B82F6;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    box-shadow: 0px 5px 46px -11px #3B82F6;
+    width: 13em;
+    padding: 1em;
+    transition: all 0.4s;
+    cursor: pointer;
+    vertical-align:middle;
+   }
+   
+   .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+   }
+   
+   .button span:after {
+    content: '¡GRATIS!';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.7s;
+   }
+   
+   .button:hover span {
+    padding-right: 4.50em;
+   }
+   
+   .button:hover span:after {
+    opacity: 4;
+    right: 0;
+   }
+
+   .custom-color-beta-p {
+    color: #3B82F6;
+   }
+
+   .card-beta {
+    width: 350px; /* Ajusta el ancho del card */
+    height: 300px; /* Ajusta la altura del card */
+    border-radius: 8px; /* Ajusta el radio de borde */
+    display: flex;
+    flex-direction: column; /* Cambia a disposición vertical */
+    gap: 10px; /* Aumenta el espacio entre los elementos */
+    padding: 1em;
+  }
+  
+  .card-beta p {
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5s;
+    border: 1px solid #3B82F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-beta p:hover {
+    flex: 4;
+  }
+  
+  .card-beta p span {
+    padding: 1em; /* Aumenta el relleno */
+    text-align: center;
+    transition: all 0.5s;
+    text-transform: uppercase;
+    color: #3B82F6;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    font-size: 1.2em; /* Ajusta el tamaño del texto */
+  }
+
+  .bg-cutom-betagames{
+    background-color: #0f0f0f;
+  }
+
   
