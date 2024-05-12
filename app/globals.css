@@ -6,3 +6,22 @@ body {
     background-color: #151515;
 }
 
+/* Estilos para el scroll personalizado */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho del scroll */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #202020; /* Color de fondo del track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ffff; /* Color del thumb */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3B82F6; /* Color del thumb al pasar el ratón */
+  }
+  
+  
