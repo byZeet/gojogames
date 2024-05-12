@@ -16,7 +16,7 @@ export default function Home() {
         <div className=''><OfertsGame/></div>
         <div className=''><ReviewsGame/></div>
         <div className=''><NextLaunchGame/></div>
-        <div className=' mt-36 mb-20'><Betagames/></div>
+        <div className=''><Betagames/></div>
         <div className=''><CardCategory/></div>
 
     </main>

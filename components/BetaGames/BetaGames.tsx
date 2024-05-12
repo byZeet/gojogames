@@ -67,7 +67,7 @@ export const Betagames = () => {
   };
 
   return (
-    <main className='betagames-container' style={{ zIndex: "9999" }}>
+    <main className='betagames-container mb-20' style={{ zIndex: "9999" }}>
       <div className='container-general-beta'>
         <div className='left-section'>
           <div className='controller-container'>

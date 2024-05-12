@@ -4,18 +4,21 @@ import heart from '../../public/assets/icons/heart.svg';
 import cartplus from '../../public/assets/icons/cart-plus.svg';
 import arrowright from '../../public/assets/icons/chevron-compact-right.svg'
 import './OfertsGame.scss'
+import Link from 'next/link';
 
 export const OfertsGame = () => {
   return (
     <main>
-    <div className='flex gap-2 ml-52 items-center'>
-      <h1 className='text-3xl'>Ofertas</h1>
-      <Image src={arrowright} alt=' ' width={36} height={36}/>
-    </div>
+<div className='flex gap-1 ml-20 mb-5 mt-20 items-center title-category w-fit'>
+        <Link href="/categorias">
+            <h1 className='text-3xl'>Ofertas</h1>
+        </Link>
+        <Image src={arrowright} alt=' ' width={36} height={36}/>
+      </div>
     <div className='flex w-full justify-center mb-10'>
     </div>
     <div className='flex justify-center items-center mb-10'>
-      <div className='w-fit h-fit grid grid-cols-4 grid-rows-3 gap-5'>
+      <div className='w-fit h-fit grid grid-cols-4 grid-rows-2 mb-10 gap-5'>
 
 {/* CARDS DESCUENTOS */}
 <div className="card w-120 custom-bg-color shadow">

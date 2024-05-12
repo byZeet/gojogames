@@ -1,0 +1,72 @@
+.full-width-blue {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #3B82F6;
+    width: 100%;
+    text-align: center; /* Agregar esta línea para centrar el texto */
+  }
+  
+  .container-nextlaunch {
+    --color: #ffcd02; /* Color blanco al principio */
+    --hover-color: #ffcd02; /* Color al hacer hover */
+    --solid-color: #ffffff; /* Nuevo color para el ícono sólido */
+    --size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+  }
+  
+  .container-nextlaunch:hover,
+  .container-nextlaunch input:checked ~ .bell-regular:hover {
+    fill: var(--hover-color); /* Cambiar el color al hacer hover */
+  }
+  
+  .container-nextlaunch .bell-regular {
+    display: none;
+  }
+  
+  .container-nextlaunch .bell-solid {
+    animation: keyframes-fill .5s;
+  }
+  
+  .container-nextlaunch input:checked ~ .bell-regular {
+    fill: var(--solid-color); /* Cambiar el color del ícono regular al hacer clic */
+    display: block;
+  }
+  
+  .container-nextlaunch input:checked ~ .bell-solid {
+    display: none;
+  }
+  
+  .container-nextlaunch input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  @keyframes keyframes-fill {
+    0% {
+      opacity: 0;
+    }
+  
+    25% {
+      transform: rotate(25deg);
+    }
+  
+    50% {
+      transform: rotate(-20deg) scale(1.2);
+    }
+  
+    75% {
+      transform: rotate(15deg);
+    }
+  }
+  

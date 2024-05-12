@@ -38,7 +38,7 @@ export const CardCategory = () => {
   return (
     <div>
 
-<div className='flex gap-1 ml-20 mb-28 items-center title-category'>
+<div className='flex gap-1 ml-20 mb-28 items-center title-category w-fit'>
         <Link href="/categorias">
             <h1 className='text-3xl'>Categorías</h1>
         </Link>
