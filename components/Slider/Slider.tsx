@@ -1,29 +1,21 @@
-import React from 'react'
-import heart from '../../public/assets/icons/heart.svg'
-import Image from 'next/image'
-import './Slider.css'
-
+import React from 'react';
+import Image from 'next/image';
+import wallpaper2 from '../../public/assets/img/wallpaper2.jpg';
+import './Slider.scss';
 
 export const Slider = () => {
   return (
-    <div className='container-carrousel'>
-        <div className='content'>
-          <div className='pagination'></div>
+    <main>
+      <div className="wallpaper-container relative">
+        <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom, transparent, #151515)'}}></div>
+        <Image src={wallpaper2} alt="Wallpaper" width={1920} height={450} className="z-10"/>
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-white z-20 mt-20 gap-5">
+          <h2 className="text-4xl font-bold">Call of Duty Modern Warfare</h2>
+          <div className="flex items-center bg-blue-500 text-white rounded-full py-0.1 px-2">
+          45,99€
         </div>
-        <div className='state'>
-            &nbsp;
         </div>
-    <div className='controls'>
-    <button className='control control--prev' aria-label='Previous'>
-    <Image className='icon' src={heart} alt=' ' width={25} height={25}/>
-    </button>
-    <button className='control contro--play-pause' aria-label='Play/Pause'>
-    <Image className='icon icon--play' src={heart} alt=' ' width={25} height={25}/>
-    </button>
-    <button className='control control--next' aria-label='Next'>
-    <Image className='icon' src={heart} alt=' ' width={25} height={25}/>
-    </button>
-    </div>
-    </div>
-    )
-}
+      </div>
+    </main>
+  );
+};

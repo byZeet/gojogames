@@ -12,6 +12,7 @@ export default function Navbar() {
   const [isTop, setIsTop] = useState(true);
   const [searchValue, setSearchValue] = useState("");
   const [showSettings, setShowSettings] = useState(true); // Estado para controlar la visibilidad de los ajustes
+  const {user} = useUser();
 
   useEffect(() => {
     function handleScroll() {
@@ -47,7 +48,7 @@ export default function Navbar() {
     <div className={`navbar ${isTop ? 'navbar-top' : 'navbar-scrolled'}`}>
       <div className="flex justify-center items-center gap-1">
         <Link href="/">
-          <button className="btn btn-ghost text-xl ml-5">
+          <button className="btn btn-ghost text-xl ml-16">
             <Image src={gojogameslogo} alt="" width={60} height={60} />
           </button>
         </Link>
@@ -93,10 +94,10 @@ export default function Navbar() {
           )}
         </form>
       </div>
-      <div className="dropdown dropdown-end mr-10">
+      <div className="dropdown dropdown-end mr-5">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
         <div className="indicator">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
           <span className="badge badge-sm indicator-item">8</span>
         </div>
       </div>
@@ -111,22 +112,31 @@ export default function Navbar() {
       </div>
     </div>
       <div className="flex justify-center items-center gap-1">
-        <button data-quantity="0" className="btn-cart-nav mr-3">
-          <svg className="icon-cart-nav" viewBox="0 0 24.38 30.52" xmlns="http://www.w3.org/2000/svg">
-            <title>icon-cart-nav</title>
-            <path transform="translate(-3.62 -0.85)" d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Zm0,0"></path>
-          </svg>
-          <span className="quantity-nav">0</span>
-        </button>
-        <Link href="/sign-up">
-          <button className="button-nav mr-10">
+        
+        <div className='flex items-center gap-2  mr-10'>
+              {!user && (
+                <>
+                  <Link href="/sign-in">
+                  <button className="button-nav mr-10">
             Sign up
             <div className="arrow-wrapper-nav">
               <div className="arrow-nav"></div>
             </div>
           </button>
-        </Link>
-        <UserButton />
+                  </Link>
+                </>
+              )}
+              {user && (
+                <div className='mr-10'>
+                  <UserButton/>
+                </div>
+              )}
+            </div>
+
+
+
+
+
       </div>
     </div>
   );
