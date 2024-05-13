@@ -1,12 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-import heart from '../../public/assets/icons/heart.svg';
-import cartplus from '../../public/assets/icons/cart-plus.svg';
-import arrowright from '../../public/assets/icons/chevron-compact-right.svg'
-import './CardGame.scss'
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons'; // Importa el icono faTimes
+import './CardGame.scss'
+
+import cartplus from '../../public/assets/icons/cart-plus.svg';
+import arrowright from '../../public/assets/icons/chevron-compact-right.svg'
+
 import { getJuegos } from '@/lib/actions/juegos.actions';
 import { Juego } from '@/types';
 
@@ -27,7 +28,7 @@ const CardGame = async () => {
         <div className='flex w-full justify-center mb-10'>
         </div>
         <div className='flex justify-center items-center mb-10'>
-          <div className='w-fit h-fit grid grid-cols-4 grid-rows-3 gap-5'>
+          <div className='w-fit h-fit grid grid-cols-4 grid-rows-2 gap-5'>
           {/* CARDS DESCUENTOS */}
           {juegos.map((juego: Juego) => (
                 <div className="card w-120 custom-bg-color shadow">
@@ -58,8 +59,8 @@ const CardGame = async () => {
 
     </div>
         <div className="card-actions justify-between items-center">
-          <div className="flex flex-column items-end gap-3 align-self-end"> {/* Aquí agregué align-self-end */}
-            <h1 className='text-neutral-100 font-medium'>{juego.precio}</h1>
+          <div className="flex flex-column items-end gap-3 align-self-end"> 
+            <h1 className='text-neutral-100 font-medium'>{juego.precio}€</h1>
           </div>
           <div className='flex gap-3'>
             <label className="ui-bookmark">

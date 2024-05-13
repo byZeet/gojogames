@@ -1,10 +1,12 @@
 import React from "react";
 import './Catergorias.scss'
+import CardGame from '../../../components/CardGame/CardGame'
 
 export default function Categorias() {
   return (
-    <main>
-        <h1>Estas en Categorias</h1>
+    <main className="w-full h-full">
+        <div>.</div>
+        <CardGame/>
     </main>
   )
 }

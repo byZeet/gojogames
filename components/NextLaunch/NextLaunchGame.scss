@@ -8,6 +8,10 @@
     text-align: center; /* Agregar esta línea para centrar el texto */
   }
   
+.custom-card-nextlaunch{
+  justify-content: space-between;
+}
+
   .container-nextlaunch {
     --color: #ffcd02; /* Color blanco al principio */
     --hover-color: #ffcd02; /* Color al hacer hover */

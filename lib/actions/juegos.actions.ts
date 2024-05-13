@@ -7,7 +7,21 @@ export async function getJuegos() {
     try {
         await mongoConnect();
         
-        const juegos = await Juego.find().limit(12);
+        const juegos = await Juego.find().limit(24);
+        console.log(juegos)
+
+        return JSON.parse(JSON.stringify(juegos));
+
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+export async function getCategorias() {
+    try {
+        await mongoConnect();
+        
+        const juegos = await Juego.find().limit(24);
         console.log(juegos)
 
         return JSON.parse(JSON.stringify(juegos));
@@ -32,10 +46,11 @@ export async function getJuegosOferta() {
 export async function getJuegosProximos() {
     try {
         await mongoConnect();
-        const juegos = await Juego.find({ fecha: null }).limit(8);
+        const juegos = await Juego.find({ fecha: { $exists: true, $ne: null } }).limit(8);
         console.log(juegos)
         return JSON.parse(JSON.stringify(juegos));
     } catch (error) {
         console.log(error);
     }
 };
+

@@ -5,7 +5,7 @@ import './Slider.scss';
 
 export const Slider = () => {
   return (
-    <main>
+    <main className='w-full'>
       <div className="wallpaper-container relative">
         <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom, transparent, #151515)'}}></div>
         <Image src={wallpaper2} alt="Wallpaper" width={1920} height={450} className="z-10"/>

@@ -36,7 +36,7 @@ import arrowright from '../../public/assets/icons/chevron-compact-right.svg'
 
 export const CardCategory = () => {
   return (
-    <div>
+    <div className='w-full h-full'>
 
 <div className='flex gap-1 ml-20 mb-28 items-center title-category w-fit'>
         <Link href="/categorias">
