@@ -21,7 +21,7 @@
 
 .card {
   max-width: 100%; /* Puedes ajustar el tamaño aquí */
-  height: 360px;
+  max-height: 100%;
   /* Agrega otros estilos si es necesario */
 }
 
@@ -31,5 +31,7 @@ h1 {
 }
 
 .card-body {
+  display: flex;
+  justify-content: space-between;
 padding: 15px;
 }

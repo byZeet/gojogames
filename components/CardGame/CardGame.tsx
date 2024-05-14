@@ -26,7 +26,7 @@ const CardGame = () => {
 
   return (
     <main>
-      <div className="flex gap-1 ml-20 mb-5 mt-20 items-center title-category w-fit">
+      <div className="flex gap-1 ml-32 mb-5 mt-20 items-center title-category w-fit">
         <Link href="/">
           <h1 className="text-3xl">Nuevo y Tendencias</h1>
         </Link>
@@ -36,7 +36,7 @@ const CardGame = () => {
         {/* Contenido adicional aquí */}
       </div>
       <div className="flex justify-center items-center mb-10">
-        <div className="w-fit h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-5 p-20">
+        <div className="w-fit h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-5 pl-32 pr-32">
           {juegos.map((juego: Juego, index: number) => (
             <div key={index} className="card w-full custom-bg-color shadow">
               <figure>

@@ -95,11 +95,3 @@
     transform: translate(-50%, 0%) scale(103%); /* Escala la imagen al 110% y mantiene la posición inferior */
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px; /* Reducir el espacio entre elementos */
-    justify-content: center; /* Centrar el grid horizontalmente */
-    align-items: center; /* Centrar el grid verticalmente */
-}
-

@@ -26,7 +26,7 @@ const OfertsGame = () => {
 
   return (
     <main>
-      <div className='flex gap-1 ml-20 mb-5 mt-20 items-center title-category w-fit'>
+      <div className='flex gap-1 ml-32 mb-5 mt-20 items-center title-category w-fit'>
         <Link href='/'>
           <h1 className='text-3xl'>Ofertas</h1>
         </Link>
@@ -34,7 +34,7 @@ const OfertsGame = () => {
       </div>
       <div className='flex w-full justify-center mb-10'></div>
       <div className='flex justify-center items-center mb-10'>
-        <div className='w-fit h-fit grid grid-cols-4 grid-rows-2 mb-10 gap-5'>
+        <div className='w-fit h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-5 pl-32 pr-32 pb-20'>
           {/* CARDS DESCUENTOS */}
           {juegos.map((juego: Juego, index: number) => (
             <div key={index} className='card w-120 custom-bg-color shadow'>

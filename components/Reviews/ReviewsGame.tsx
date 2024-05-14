@@ -10,7 +10,7 @@ export const ReviewsGame = () => {
     <main>
       <div className='footer-container' style={{ backgroundColor: '#1B1B1B' }}>
 
-        <div className='flex justify-center custom-review-container w-full h-fit pl-20 pr-20 pt-10 pb-10 '>
+        <div className='flex justify-center items-stretch custom-review-container w-full h-fit pl-32 pr-32 pt-10 pb-10 '>
 {/* RESEÑAS */}
 <div className="flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "360px" }}>
 

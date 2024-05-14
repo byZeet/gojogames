@@ -38,14 +38,14 @@ export const CardCategory = () => {
   return (
     <div className='w-full h-full'>
 
-<div className='flex gap-1 ml-20 mb-28 items-center title-category w-fit'>
+<div className='flex gap-1 ml-32 mb-24 mt-20 items-center title-category w-fit'>
         <Link href="/">
             <h1 className='text-3xl'>Categorías</h1>
         </Link>
         <Image src={arrowright} alt=' ' width={36} height={36}/>
       </div>
 <div className='flex justify-center items-center flex-col'>
-    <div className="grid-container">
+    <div className="w-fit h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-14 pl-32 pr-32">
       {/* ACCION */}
         <div className="image-container">
             <Image src={wallpaperaccion} alt='' width={350} height={200} className="background-image"/>

@@ -2,3 +2,9 @@
     gap: 10px;
 }
 
+.card-reseña {
+    display: flex;
+    height: 290px;
+    justify-content: space-between;
+    flex-shrink: 0; /* Evita que el card se encoja más allá de su contenido */
+}
