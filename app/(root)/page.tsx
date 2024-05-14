@@ -6,6 +6,7 @@ import { ReviewsGame } from '../../components/Reviews/ReviewsGame'
 import  NextLaunchGame  from '../../components/NextLaunch/NextLaunchGame'
 import { Betagames } from '../../components/BetaGames/BetaGames';
 
+
 import React from "react";
 export default function Home() {
   return (
