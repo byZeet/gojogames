@@ -30,7 +30,7 @@ yarn-error.log*
 .env
 
 # middleware
-middleware.ts
+middleware.ts*
 
 # vercel
 .vercel
