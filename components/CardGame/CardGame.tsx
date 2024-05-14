@@ -36,9 +36,9 @@ const CardGame = () => {
         {/* Contenido adicional aquí */}
       </div>
       <div className="flex justify-center items-center mb-10">
-        <div className="w-fit h-fit grid grid-cols-4 grid-rows-2 gap-5">
+        <div className="w-fit h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-5 p-20">
           {juegos.map((juego: Juego, index: number) => (
-            <div key={index} className="card w-120 custom-bg-color shadow">
+            <div key={index} className="card w-full custom-bg-color shadow">
               <figure>
                 <img src={juego.foto} alt="Shoes" />
               </figure>
