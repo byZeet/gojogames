@@ -29,9 +29,6 @@ yarn-error.log*
 .env*.local
 .env
 
-# middleware
-middleware.ts*
-
 # vercel
 .vercel
 
