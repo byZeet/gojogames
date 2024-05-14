@@ -27,7 +27,7 @@ const CardGame = () => {
   return (
     <main>
       <div className="flex gap-1 ml-20 mb-5 mt-20 items-center title-category w-fit">
-        <Link href="/categorias">
+        <Link href="/">
           <h1 className="text-3xl">Nuevo y Tendencias</h1>
         </Link>
         <Image src={arrowright} alt=" " width={36} height={36} />

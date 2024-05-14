@@ -17,20 +17,6 @@ export async function getJuegos() {
     }
 };
 
-export async function getCategorias() {
-    try {
-        await mongoConnect();
-        
-        const juegos = await Juego.find().limit(24);
-        console.log(juegos)
-
-        return JSON.parse(JSON.stringify(juegos));
-
-    } catch (error) {
-        console.log(error);
-    }
-};
-
 
 export async function getJuegosOferta() {
     try {
