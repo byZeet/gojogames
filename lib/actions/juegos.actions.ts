@@ -7,7 +7,7 @@ export async function getJuegos() {
     try {
         await mongoConnect();
         
-        const juegos = await Juego.find().limit(24);
+        const juegos = await Juego.find().limit(8);
         console.log(juegos)
 
         return JSON.parse(JSON.stringify(juegos));
@@ -16,6 +16,21 @@ export async function getJuegos() {
         console.log(error);
     }
 };
+
+export async function getJuegosBuscar(busqueda: string) {
+    try {
+        await mongoConnect();
+        
+        const juegos = await Juego.find({ titulo: { $regex: busqueda, $options: 'i' } }).limit(24);
+        console.log(juegos)
+
+        return JSON.parse(JSON.stringify(juegos));
+
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 
 
 export async function getJuegosOferta() {
