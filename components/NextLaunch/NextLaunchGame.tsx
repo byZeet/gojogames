@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import arrowright from '../../public/assets/icons/chevron-compact-right.svg';
+import arrowright from '../../public/assets/icons/arrow-next-small-svgrepo-com.svg';
 import Link from 'next/link';
 import './NextLaunchGame.scss';
 import cartplus from '../../public/assets/icons/cart-plus.svg';
@@ -37,11 +37,15 @@ const NextLaunchGame = () => {
           {/* CARDS DESCUENTOS */}
           {juegos.map((juego: Juego, index: number) => (
             <div key={index} className='card w-120 custom-bg-color shadow'>
-              <figure>
-                <img src={juego.foto} alt='Shoes' />
-              </figure>
+              <Link href="/game">
+                <figure>
+                  <img src={juego.foto} alt='Shoes' />
+                </figure>
+              </Link>
               <div className='card-body custom-card-nextlaunch gap-5'>
-                <h2 className='card-title w-auto text-neutral-100'>{juego.titulo}</h2>
+              <Link href="/game">
+                  <h2 className='card-title w-auto text-neutral-100'>{juego.titulo}</h2>
+                </Link>
                 <div className='card-actions justify-between items-center'>
                   <div className='full-width-blue flex justify-between items-center p-3'>
                     <div>

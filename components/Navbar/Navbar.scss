@@ -219,3 +219,23 @@
   overflow-y: auto; /* Habilita el desplazamiento vertical */
 }
 
+.search-icon {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.btn-close {
+  position: absolute;
+  top: 15px;
+  right: 19px;
+}
+
+.delete-icon:hover {
+  fill: red;
+}
+
+
+.card-body-cart{
+  width: 300px;
+}

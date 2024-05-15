@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import './OfertsGame.scss';
 
-import cartplus from '../../public/assets/icons/cart-plus.svg';
-import arrowright from '../../public/assets/icons/chevron-compact-right.svg';
+import cartplus from '../../public/assets/icons/cart-plus-svgrepo-com.svg';
+import arrowright from '../../public/assets/icons/arrow-next-small-svgrepo-com.svg';
 
 import { getJuegosOferta } from '@/lib/actions/juegos.actions';
 import { Juego } from '@/types';
@@ -38,11 +38,15 @@ const OfertsGame = () => {
           {/* CARDS DESCUENTOS */}
           {juegos.map((juego: Juego, index: number) => (
             <div key={index} className='card w-120 custom-bg-color shadow'>
-              <figure>
-                <img src={juego.foto} alt='Shoes' />
-              </figure>
+              <Link href="/game">
+                <figure>
+                  <img src={juego.foto} alt='Shoes' />
+                </figure>
+              </Link>
               <div className='card-body gap-5'>
-                <h2 className='card-title w-auto text-neutral-100'>{juego.titulo}</h2>
+              <Link href="/game">
+                  <h2 className='card-title w-auto text-neutral-100'>{juego.titulo}</h2>
+                </Link>
                 <div className='container-badge flex flex-wrap gap-2'>
                   {juego.demo_disponible && (
                     <div className='badge badge-outline demo-badge-color p-3'>DemoDisponible</div>
@@ -83,7 +87,7 @@ const OfertsGame = () => {
                       <div className='bookmark'>
                         <svg
                           viewBox='0 0 16 16'
-                          style={{ marginTop: '4px' }}
+                          style={{ marginTop: '0px' }}
                           className='bi bi-heart-fill'
                           height='25'
                           width='25'
@@ -96,7 +100,7 @@ const OfertsGame = () => {
                         </svg>
                       </div>
                     </label>
-                    <Image src={cartplus} alt=' ' width={25} height={25} />
+                    <Image src={cartplus} alt=" " width={25} height={25} />
                   </div>
                 </div>
               </div>

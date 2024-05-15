@@ -14,12 +14,13 @@ import discord from '../../public/assets/icons/discord.svg';
 import twitch from '../../public/assets/icons/twitch.svg';
 import youtube from '../../public/assets/icons/youtube.svg';
 import securepay from '../../public/assets/icons/securepay.svg';
-import Australia from '../../public/assets/img/Australia.png'
-import España from '../../public/assets/img/España.png'
-import Canada from '../../public/assets/img/Canada.png'
+
+import Australia from '../../public/assets/img/australia.png'
+import España from '../../public/assets/img/espana.png'
+import Canada from '../../public/assets/img/canada.png'
 import Japon from '../../public/assets/img/Japon.png'
 import Inglaterra from '../../public/assets/img/Inglaterra.png'
-import USA from '../../public/assets/img/USA.png'
+import USA from '../../public/assets/img/estados-unidos.png'
 
 export const Footer = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
