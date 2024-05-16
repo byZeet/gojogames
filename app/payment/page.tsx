@@ -1,7 +1,16 @@
-import React from 'react'
+import React from "react";
+import './payment.scss'
 
-export const Payment = () => {
+export default function Payment() {
   return (
-    <div>Payment</div>
+    <main className='container-payment'>
+      <div className="container-payment-interior">
+        <h1>Carrito Payment</h1>
+        <div className="container-lista-compra bg-white">
+          <h1>Título</h1>
+
+        </div>
+      </div>
+    </main>
   )
 }

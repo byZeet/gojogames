@@ -135,7 +135,7 @@ export default function Navbar() {
     <div className="">
       <span className="font-bold text-lg">8 Juegos Seleccionados</span>
       <div className="">
-        <button className="btn btn-primary btn-block">View cart</button>
+        <Link href="/payment"><button className="btn btn-primary btn-block">View cart</button></Link>
       </div>
     </div>
   </div>

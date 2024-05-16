@@ -1,9 +1,13 @@
-'use client';
+// PaginaJuego.tsx
 
-import React from 'react'
+import React from 'react';
 
-export const GameIndividualPage = () => {
+const PaginaJuego = () => {
   return (
-    <div>GameIndividualPage</div>
-  )
-}
+    <main>
+      Juegos
+    </main>
+  );
+};
+
+export default PaginaJuego; // Exporta PaginaJuego como el componente predeterminado
