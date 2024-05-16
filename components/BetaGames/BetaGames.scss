@@ -151,4 +151,18 @@
     background-color: #0f0f0f;
   }
 
+
+  
+  .custom-select {
+    color: white; /* Texto en blanco */
+    border: 2px solid #333; /* Cambiar el borde y su grosor */
+    padding: 0.5rem; /* Ajustar el espacio interno */
+    border-radius: 0.375rem; /* Ajustar el radio de borde */
+    font-size: 1rem; /* Tamaño de fuente */
+  }
+  
+  .custom-select option {
+    background-color: #0f0f0f;
+    color: #eeeeee;
+  }
   

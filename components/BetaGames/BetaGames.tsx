@@ -128,17 +128,21 @@ Embark Studios</h1></span></p>
               <form className="space-y-6" onSubmit={handleFormSubmit}>
                 <div className="flex items-center justify-center">
                   <div className="relative">
-                    <input
-                      type="text"
-                      id="betaCode"
-                      value={betaCode}
-                      onChange={(e) => setBetaCode(e.target.value)}
-                      required
-                      className="border-b border-white py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit mt-4 p-2 rounded-md w-full"
-                    />
+                  <select
+  id="betaCode"
+  value={betaCode}
+  onChange={(e) => setBetaCode(e.target.value)}
+  required
+  className="border-b border-white py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit mt-4 p-2 rounded-md w-full custom-select"
+>
+  <option value="">Selecciona un juego BETA</option>
+  <option value="Hades II">Hades II</option>
+  <option value="Manor Lords">Manor Lords</option>
+  <option value="The Finals">The Finals</option>
+</select>
                     <label
                       htmlFor="betaCode"
-                      className="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700 text-sm font-medium text-white"
+                      className="absolute left-0 bottom-12 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700 text-sm font-medium text-white"
                     >
                       Nombre BETA
                     </label>
@@ -153,11 +157,11 @@ Embark Studios</h1></span></p>
                       value={userId}
                       onChange={(e) => setUserId(e.target.value)}
                       required
-                      className="border-b border-white py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit mt-4 p-2 rounded-md w-full"
+                      className="border-b border-white py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit mt-4 p-2 rounded-md w-full custom-select"
                     />
                     <label
                       htmlFor="userId"
-                      className="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700 text-sm font-medium text-white"
+                      className="absolute left-0 bottom-12 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700 text-sm font-medium text-white"
                     >
                       ID Usuario
                     </label>
@@ -173,11 +177,11 @@ Embark Studios</h1></span></p>
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="border-b border-white py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit mt-4 p-2 rounded-md w-full"
+                      className="border-b border-white py-1 focus:border-b-2 focus:border-blue-700 transition-colors focus:outline-none peer bg-inherit mt-4 p-2 rounded-md w-full custom-select"
                     />
                     <label
                       htmlFor="email"
-                      className="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700 text-sm font-medium text-white"
+                      className="absolute left-0 bottom-12 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all peer-focus:text-blue-700 text-sm font-medium text-white"
                     >
                       Correo Electrónico
                     </label>
