@@ -1,4 +1,67 @@
 .container-payment {
     max-width: 100%;
+    height: 100%;
+}
+
+.container-payment-interior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+    padding-top: 100px;
+}
+
+.container-lista-compra {
+    width: 100%;
+    background-color: #202020;
+}
+
+.custom-text-grey {
+    color: white;
+}
+
+.custom-text-black{
+    color: white;
+}
+
+.custom-border-gray{
+    color: rgb(255, 255, 255);
+}
+
+.custom-text-gray-2{
+    color: white;
+}
+
+.custom-bg-indigo {
+    background-color: #ffffff;
+}
+
+.custom-text-indigo-2{
+    color: #3B82F6;
+}
+
+.custom-text-gray-3{
+    color: white;
+}
+
+.custom-text-indigo-3{
+    color: rgb(255, 255, 255);
+}
+
+.bg-custom-cart{
+    background-color: #202020;
+}
+
+.custom-bg-indigo-2{
+    background-color: #3B82F6;
+}
+.tarjeta-juego-carrito {
+    margin-top: 1px;
+    border-radius: 20px;
+    background-color: #202020;
+    padding: 20px;
+}
+
+.img-juego-carrito {
+    border-radius: 20px;
 }

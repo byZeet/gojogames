@@ -8,6 +8,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'; // Eliminado el imp
 import './CardGame.scss';
 
 import cartplus from '../../public/assets/icons/cart-plus-svgrepo-com.svg';
+import cartcheck from '../../public/assets/icons/cart-check-svgrepo-com.svg'
 import arrowright from '../../public/assets/icons/arrow-next-small-svgrepo-com.svg';
 
 import { getJuegos } from '@/lib/actions/juegos.actions';
