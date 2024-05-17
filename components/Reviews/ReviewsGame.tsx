@@ -18,7 +18,7 @@ export const ReviewsGame = () => {
                 <div className="flex gap-4">
                   <img
                     src="https://i.pinimg.com/originals/62/90/d2/6290d211c952cbc609553f8cec8ef0f2.jpg"
-                    alt=""
+                    alt="ImagenUsuarioCardUno"
                     className="w-16 h-16 rounded-full"
                   />
                   <div className="flex flex-col gap-1">
@@ -52,7 +52,7 @@ export const ReviewsGame = () => {
                 <div className="flex gap-4">
                   <img
                     src="https://i.pinimg.com/736x/b1/1f/17/b11f17eb4b20068aebe32298905ba567.jpg"
-                    alt=""
+                    alt="ImagenUsuarioCardDos"
                     className="w-16 h-16 rounded-full"
                   />
                   <div className="flex flex-col gap-1">
@@ -86,7 +86,7 @@ export const ReviewsGame = () => {
                 <div className="flex gap-4">
                   <img
                     src="https://i.pinimg.com/736x/ac/64/c3/ac64c3005563ae21fb7da7f4b23dc561.jpg"
-                    alt=""
+                    alt="ImagenUsuarioCardTres"
                     className="w-16 h-16 rounded-full"
                   />
                   <div className="flex flex-col gap-1">
@@ -120,7 +120,7 @@ export const ReviewsGame = () => {
                 <div className="flex gap-4">
                   <img
                     src="https://i.pinimg.com/736x/fb/4c/ea/fb4cea3eaf64a85c3cab08f861244d5d.jpg"
-                    alt=""
+                    alt="ImagenUsuarioCardCuatro"
                     className="w-16 h-16 rounded-full"
                   />
                   <div className="flex flex-col gap-1">
@@ -154,7 +154,7 @@ export const ReviewsGame = () => {
                 <div className="flex gap-4">
                   <img
                     src="https://pm1.aminoapps.com/7614/830b4c19054ecb643b526e8ed682325f25167b7ar1-700-708v2_uhq.jpg"
-                    alt=""
+                    alt="ImagenUsuarioCardCinco"
                     className="w-16 h-16 rounded-full"
                   />
                   <div className="flex flex-col gap-1">

@@ -2,12 +2,10 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import arrowright from '../../public/assets/icons/arrow-next-small-svgrepo-com.svg';
 import Link from 'next/link';
 import './NextLaunchGame.scss';
-import cartplus from '../../public/assets/icons/cart-plus.svg';
+
 
 import { getJuegosProximos } from '@/lib/actions/juegos.actions';
 import { Juego } from '@/types';
@@ -29,7 +27,7 @@ const NextLaunchGame = () => {
         <Link href="/">
           <h1 className='text-3xl'>Próximos Lanzamientos</h1>
         </Link>
-        <Image src={arrowright} alt=' ' width={36} height={36} />
+        <Image src={arrowright} alt='flecha-derecha-launch' width={36} height={36} />
       </div>
       <div className='flex w-full justify-center mb-10'></div>
       <div className='flex justify-center items-center mb-10'>
@@ -39,7 +37,7 @@ const NextLaunchGame = () => {
             <div key={index} className='card w-120 custom-bg-color shadow'>
               <Link href="/game">
                 <figure>
-                  <img src={juego.foto} alt='Shoes' />
+                  <img src={juego.foto} alt='FotoJuegosLaunch' />
                 </figure>
               </Link>
               <div className='card-body custom-card-nextlaunch gap-5'>

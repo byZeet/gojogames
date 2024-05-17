@@ -8,7 +8,7 @@ export const Slider = () => {
     <main className='w-full'>
       <div className="wallpaper-container relative">
         <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom, transparent, #151515)'}}></div>
-        <Image src={wallpaper2} alt="Wallpaper" width={1920} height={450} className="z-10"/>
+        <Image src={wallpaper2} alt="CarrouselPortada" width={1920} height={450} className="z-10"/>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white z-20 mt-20 gap-5">
           <h2 className="text-4xl font-bold">Call of Duty Modern Warfare</h2>
           <div className="flex items-center bg-blue-500 text-white rounded-full py-0.1 px-2">

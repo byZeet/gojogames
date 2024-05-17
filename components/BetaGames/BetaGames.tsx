@@ -71,10 +71,10 @@ export const Betagames = () => {
       <div className='container-general-beta flex flex-col md:flex-row'>
         <div className='left-section flex justify-center items-center'>
           <div className='controller-container'>
-            <Image className='controllerblack' src={controllerblack} alt=' ' width={1000} height={1000} />
+            <Image className='controllerblack' src={controllerblack} alt='foto-mando-negro' width={1000} height={1000} />
           </div>
           <div className='controller-container'>
-            <Image className='controllerwhite' src={controllerwhite} alt=' ' width={1000} height={1000} />
+            <Image className='controllerwhite' src={controllerwhite} alt='foto-mando-blanco' width={1000} height={1000} />
           </div>
         </div>
         <div className='right-section mt-2 mb-2 flex justify-evenly gap-10 items-center flex-col'>
@@ -97,7 +97,7 @@ export const Betagames = () => {
             <button className="absolute top-2 right-3 text-gray-500 hover:text-red-600" onClick={handlePopupClose}>
               <FontAwesomeIcon icon={faTimes} />
             </button>
-            <Image className='mb-4' src={gojogameslogo} alt=' ' width={100} height={100}/>
+            <Image className='mb-4' src={gojogameslogo} alt='foto-gojogameslogo' width={100} height={100}/>
 
             <p>
               <span className="custom-color-beta-p">BETAS</span> Disponibles

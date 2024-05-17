@@ -30,7 +30,7 @@ const OfertsGame = () => {
         <Link href='/'>
           <h1 className='text-3xl'>Ofertas</h1>
         </Link>
-        <Image src={arrowright} alt=' ' width={36} height={36} />
+        <Image src={arrowright} alt='flecha-derecha-ofertas' width={36} height={36} />
       </div>
       <div className='flex w-full justify-center mb-10'></div>
       <div className='flex justify-center items-center mb-10'>
@@ -40,7 +40,7 @@ const OfertsGame = () => {
             <div key={index} className='card w-120 custom-bg-color shadow'>
               <Link href="/game">
                 <figure>
-                  <img src={juego.foto} alt='Shoes' />
+                  <img src={juego.foto} alt='FotoJuego' />
                 </figure>
               </Link>
               <div className='card-body gap-5'>
@@ -100,7 +100,7 @@ const OfertsGame = () => {
                         </svg>
                       </div>
                     </label>
-                    <Image src={cartplus} alt=" " width={25} height={25} />
+                    <Image src={cartplus} alt="Carrito" width={25} height={25} />
                   </div>
                 </div>
               </div>

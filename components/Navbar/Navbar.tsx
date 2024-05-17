@@ -69,7 +69,7 @@ export default function Navbar() {
         <div className="flex justify-center items-center gap-1">
           <Link href="/">
             <button className="btn btn-ghost text-xl ml-16">
-              <Image src={gojogameslogo} alt="" width={60} height={60} />
+              <Image src={gojogameslogo} alt="logogojogames" width={60} height={60} />
             </button>
           </Link>
         </div>
@@ -78,11 +78,11 @@ export default function Navbar() {
       <div className="relative">
       {isMobile ? ( // Renderiza solo el icono de búsqueda en dispositivos móviles
         <button className='search-icon'>
-          <Image src={search} alt="" width={20} height={20} />
+          <Image src={search} alt="search-imagen" width={20} height={20} />
         </button>
       ) : (
         <button className='search-icon hidden md:block'> {/* Oculta el icono de búsqueda en dispositivos no móviles */}
-          <Image src={search} alt="" width={20} height={20} />
+          <Image src={search} alt="search-oculto" width={20} height={20} />
         </button>
       )}
         <input
@@ -94,7 +94,7 @@ export default function Navbar() {
         />
         {!isMobile && ( // Renderiza el botón de limpiar en dispositivos no móviles
           <button className="btn-close text-gray-400 hover:text-red-600" type="reset" onClick={() => setSearchValue("")}>
-            <Image src={deleteicon} alt="" width={20} height={20} />
+            <Image src={deleteicon} alt="icono-borrar" width={20} height={20} />
           </button>
         )}
       </div>
@@ -116,7 +116,7 @@ export default function Navbar() {
             <Link href="/game">
               <div key={index} className="custom-item-juego-despliegue flex items-center gap-4 py-2">
                 <div className=" w-52 h-24 relative">
-                  <img src={juego.foto} alt={juego.titulo} className="object-cover w-full h-full rounded-md" />
+                  <img src={juego.foto} alt="FotoJuegoSearch" className="object-cover w-full h-full rounded-md" />
                 </div>
                 <div className="flex-1">
                   <p className="font-semibold">{juego.titulo}</p>
