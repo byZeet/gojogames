@@ -42,7 +42,7 @@ const CardGame = () => {
             <div key={index} className="card w-full custom-bg-color shadow">
               <Link href="/">
                 <figure>
-                  <img src={juego.foto} alt="imagen-juego-card" />
+                  <img className='img-redondeada' src={juego.foto} alt="imagen-juego-card" />
                 </figure>
               </Link>
               <div className="card-body gap-5">

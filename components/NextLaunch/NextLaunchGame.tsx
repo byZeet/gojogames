@@ -35,7 +35,7 @@ const NextLaunchGame = () => {
             <div key={index} className='card w-120 custom-bg-color shadow'>
               <Link href="/">
                 <figure>
-                  <img src={juego.foto} alt='FotoJuegosLaunch' />
+                  <img className='img-redondeada' src={juego.foto} alt='FotoJuegosLaunch' />
                 </figure>
               </Link>
               <div className='card-body custom-card-nextlaunch gap-5'>

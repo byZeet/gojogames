@@ -40,7 +40,7 @@ const OfertsGame = () => {
             <div key={index} className='card w-120 custom-bg-color shadow'>
               <Link href="/">
                 <figure>
-                  <img src={juego.foto} alt='FotoJuego' />
+                  <img className='img-redondeada' src={juego.foto} alt='FotoJuego' />
                 </figure>
               </Link>
               <div className='card-body gap-5'>

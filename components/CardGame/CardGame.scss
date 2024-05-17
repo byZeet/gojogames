@@ -20,9 +20,9 @@
 }
 
 .card {
-  max-width: 100%; /* Puedes ajustar el tamaño aquí */
+  max-width: 100%;
   max-height: 100%;
-  /* Agrega otros estilos si es necesario */
+  border-radius: 20px;
 }
 
 h1 {
@@ -39,4 +39,9 @@ padding: 15px;
 .hearth-card-icon {
   width: 24px;
   height: 24px;
+}
+
+.img-redondeada {
+  border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
