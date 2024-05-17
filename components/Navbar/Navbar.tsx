@@ -87,7 +87,7 @@ export default function Navbar() {
               )}
               <input
                 className={`input rounded-full pl-${isMobile ? '8' : '10'} py-3 pr-${isMobile ? '10' : '12'} border-2 border-transparent focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-all duration-300 shadow-md bg-white`}
-                placeholder="Buscar por título...&quot;"
+                placeholder="Buscar por título..."
                 value={searchValue}
                 onChange={handleInputChange}
                 type="text"
