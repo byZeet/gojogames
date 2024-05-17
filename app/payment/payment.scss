@@ -3,6 +3,12 @@
     height: 100%;
 }
 
+.container-pago {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
 .container-payment-interior {
     display: flex;
     justify-content: center;
@@ -29,7 +35,7 @@
 }
 
 .custom-text-gray-2{
-    color: white;
+    color: #ffffff;
 }
 
 .custom-bg-indigo {
@@ -45,7 +51,7 @@
 }
 
 .custom-text-indigo-3{
-    color: rgb(255, 255, 255);
+    color: #84FF82;
 }
 
 .bg-custom-cart{

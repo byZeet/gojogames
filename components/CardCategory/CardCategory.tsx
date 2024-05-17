@@ -36,145 +36,139 @@ import arrowright from '../../public/assets/icons/chevron-compact-right.svg'
 
 export const CardCategory = () => {
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full md:px-16 px-0'>
 
-<div className='flex gap-1 ml-32 mb-24 mt-20 items-center title-category w-fit'>
+      <div className='flex gap-1 pl-7 ml-8 mb-12 mt-10 items-center title-category w-fit'>
         <Link href="/">
-            <h1 className='text-3xl'>Categorías</h1>
+          <h1 className='text-3xl'>Categorías</h1>
         </Link>
         <Image src={arrowright} alt=' ' width={36} height={36}/>
       </div>
-<div className='flex justify-center items-center flex-col'>
-    <div className="w-fit h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-14 pl-32 pr-32">
-      {/* ACCION */}
-        <div className="image-container">
-            <Image src={wallpaperaccion} alt='' width={350} height={200} className="background-image"/>
+      
+      <div className='flex justify-center items-center flex-col'>
+        <div className="w-fit h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-14 p-4 sm:p-16">
+          {/* ACCION */}
+          <div className="image-container w-full sm:w-80 md:w-96">
+            <Image src={wallpaperaccion} alt='' layout="responsive" width={350} height={200} className="background-image rounded-lg"/>
             <div className="card-container">
-                <Image src={accionmain} alt='' className="foreground-image"/>
+              <Image src={accionmain} alt='' className="foreground-image"/>
             </div>
             <div className="text-container">
-                <p>Acción</p>
+              <p>Acción</p>
             </div>
-        </div>
-        {/* AVENTURA */}
-        <div className="image-container">
-            <Image src={wallpaperaventura} alt='' width={425} height={240} className="background-image"/>
+          </div>
+          {/* AVENTURA */}
+          <div className="image-container w-full sm:w-80 md:w-96">
+            <Image src={wallpaperaventura} alt='' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container">
-                <Image src={aventuramain} alt='' className="foreground-image"/>
+              <Image src={aventuramain} alt='' className="foreground-image"/>
             </div>
             <div className="text-container">
-                <p>Aventura</p>
+              <p>Aventura</p>
             </div>
-        </div>
-        {/* ARCADE */}
-        <div className="image-container">
-            <Image src={wallpaperarcade} alt='' width={425} height={240} className="background-image"/>
+          </div>
+          {/* ARCADE */}
+          <div className="image-container w-full sm:w-80 md:w-96">
+            <Image src={wallpaperarcade} alt='' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-arcade">
-                <Image src={arcademain} alt='' className="foreground-image"/>
+              <Image src={arcademain} alt='' className="foreground-image"/>
             </div>
             <div className="text-container">
-                <p>Arcade</p>
+              <p>Arcade</p>
             </div>
-        </div>
-        {/* FPS */}
-        <div className="image-container">
-            <Image src={wallpaperfps} alt='' width={425} height={240} className="background-image"/>
+          </div>
+          {/* FPS */}
+          <div className="image-container w-full sm:w-80 md:w-96">
+            <Image src={wallpaperfps} alt='' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container">
-                <Image src={fpsmain} alt='' className="foreground-image"/>
+              <Image src={fpsmain} alt='' className="foreground-image"/>
             </div>
             <div className="text-container">
-                <p>FPS</p>
+              <p>FPS</p>
             </div>
-        </div>
-        {/* INDIES */}
-        <div className="image-container">
-            <Image src={wallpaperindie} alt='' width={425} height={240} className="background-image"/>
+          </div>
+          {/* INDIES */}
+          <div className="image-container w-full sm:w-80 md:w-96">
+            <Image src={wallpaperindie} alt='' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-indies">
-                <Image src={indiesmain} alt='' className="foreground-image"/>
+              <Image src={indiesmain} alt='' className="foreground-image"/>
             </div>
             <div className="text-container">
-                <p>Indies</p>
+              <p>Indies</p>
             </div>
-        </div>
-        {/* SIMULACIÓN */}
-        <div className="image-container">
-            <Image src={wallpapersimulacion} alt='' width={425} height={240} className="background-image"/>
+          </div>
+          {/* SIMULACIÓN */}
+          <div className="image-container w-full sm:w-80 md:w-96">
+            <Image src={wallpapersimulacion} alt='' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-simulacion">
-                <Image src={simulacionmain} alt='' className="foreground-image"/>
+              <Image src={simulacionmain} alt='' className="foreground-image"/>
             </div>
             <div className="text-container">
-                <p>Simulación</p>
+              <p>Simulación</p>
             </div>
-        </div>
-        {/* LUCHA */}
-        <div className="image-container">
-            <Image src={wallpaperlucha} alt='' width={425} height={240} className="background-image"/>
+          </div>
+          {/* LUCHA */}
+          <div className="image-container w-full sm:w-80 md:w-96">
+            <Image src={wallpaperlucha} alt='' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-lucha">
-                <Image src={luchamain} alt='' className="foreground-image"/>
+              <Image src={luchamain} alt='' className="foreground-image"/>
             </div>
             <div className="text-container">
-                <p>Lucha</p>
+              <p>Lucha</p>
             </div>
-        </div>
-        {/* RPG */}
-        <div className="image-container">
-            <Image src={wallpaperrpg} alt='' width={425} height={240} className="background-image"/>
+          </div>
+          {/* RPG */}
+          <div className="image-container w-full sm:w-80 md:w-96">
+            <Image src={wallpaperrpg} alt='' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-rpg">
-                <Image src={rpgmain} alt='' className="foreground-image"/>
+              <Image src={rpgmain} alt='' className="foreground-image"/>
             </div>
             <div className="text-container">
-                <p>RPG</p>
+              <p>RPG</p>
             </div>
-        </div>
-        {/* COOP ONLINE */}
-        <div className="image-container">
-            <Image src={wallpapercoop} alt='' width={425} height={240} className="background-image"/>
+          </div>
+          {/* COOP ONLINE */}
+          <div className="image-container w-full sm:w-80 md:w-96">
+            <Image src={wallpapercoop} alt='' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-coop">
-                <Image src={coopmain} alt='' className="foreground-image"/>
+              <Image src={coopmain} alt='' className="foreground-image"/>
             </div>
             <div className="text-container">
-                <p>Coop Online</p>
+              <p>Coop Online</p>
             </div>
-        </div>
-        {/* DEPORTE */}
-        <div className="image-container">
-            <Image src={wallpaperdeporte} alt='' width={425} height={240} className="background-image"/>
+          </div>
+          {/* DEPORTE */}
+          <div className="image-container w-full sm:w-80 md:w-96">
+            <Image src={wallpaperdeporte} alt='' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-deporte">
-                <Image src={deportemain} alt='' className="foreground-image"/>
+              <Image src={deportemain} alt='' className="foreground-image"/>
             </div>
             <div className="text-container">
-                <p>Deporte</p>
+              <p>Deporte</p>
             </div>
-        </div>
-        {/* GESTIÓN */}
-        <div className="image-container">
-            <Image src={wallpapergestion} alt='' width={425} height={240} className="background-image"/>
+          </div>
+          {/* GESTIÓN */}
+          <div className="image-container w-full sm:w-80 md:w-96">
+            <Image src={wallpapergestion} alt='' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-gestion">
-                <Image src={gestionmain} alt='' className="foreground-image"/>
+              <Image src={gestionmain} alt='' className="foreground-image"/>
             </div>
             <div className="text-container">
-                <p>Gestión</p>
+              <p>Gestión</p>
             </div>
-        </div>
-        {/* MMO */}
-        <div className="image-container">
-            <Image src={wallpapermmo} alt='' width={425} height={240} className="background-image"/>
+          </div>
+          {/* MMO */}
+          <div className="image-container w-full sm:w-80 md:w-96">
+            <Image src={wallpapermmo} alt='' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-mmo">
-                <Image src={coopmain} alt='' className="foreground-image"/>
+              <Image src={coopmain} alt='' className="foreground-image"/>
             </div>
             <div className="text-container">
-                <p>MMO</p>
+              <p>MMO</p>
             </div>
+          </div>
         </div>
-    
-    </div>
-</div>
-
-
-
-
-
-
+      </div>
     </div>
   )
 }
