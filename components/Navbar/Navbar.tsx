@@ -4,19 +4,18 @@ import Link from 'next/link';
 import { UserButton, useUser } from '@clerk/nextjs';
 import Image from 'next/image';
 import gojogameslogo from '../../public/assets/img/gojogameslogo.svg';
-import './Navbar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes, faSearch, faSliders } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { getJuegosBuscar } from '@/lib/actions/juegos.actions';
 import search from '../../public/assets/icons/search-svgrepo-com.svg';
 import deleteicon from '../../public/assets/icons/delete-svgrepo-com.svg';
+import './Navbar.scss';
 
 interface Juego {
   titulo: string;
   precio: number;
   genero: string;
   foto: string;
-  // Agrega aquí las demás propiedades necesarias
 }
 
 export default function Navbar() {
@@ -24,7 +23,8 @@ export default function Navbar() {
   const [searchValue, setSearchValue] = useState("");
   const [showSettings, setShowSettings] = useState(true);
   const [juegosEncontrados, setJuegosEncontrados] = useState<Juego[]>([]);
-  const [isMobile, setIsMobile] = useState(false); // Nuevo estado para verificar si es móvil
+  const [isMobile, setIsMobile] = useState(false);
+
   const { user } = useUser();
 
   useEffect(() => {
@@ -34,12 +34,12 @@ export default function Navbar() {
     }
 
     function handleResize() {
-      setIsMobile(window.innerWidth <= 550); // Actualiza el estado basado en el ancho de la pantalla
+      setIsMobile(window.innerWidth <= 550);
     }
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
-    handleResize(); // Verifica el tamaño de la pantalla al inicio
+    handleResize();
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
@@ -51,15 +51,15 @@ export default function Navbar() {
     setSearchValue(inputValue);
   
     if (inputValue.trim() === "") {
-        setShowSettings(true);
+      setShowSettings(true);
     } else {
-        setShowSettings(false);
-        try {
-            const juegos = await getJuegosBuscar(inputValue);
-            setJuegosEncontrados(juegos);
-        } catch (error) {
-            console.log(error);
-        }
+      setShowSettings(false);
+      try {
+        const juegos = await getJuegosBuscar(inputValue);
+        setJuegosEncontrados(juegos);
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
@@ -74,64 +74,64 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="flex-1 flex justify-center items-center gap-1">
-        <form className="form">
-      <div className="relative">
-      {isMobile ? ( // Renderiza solo el icono de búsqueda en dispositivos móviles
-        <button className='search-icon'>
-          <Image src={search} alt="search-imagen" width={20} height={20} />
-        </button>
-      ) : (
-        <button className='search-icon hidden md:block'> {/* Oculta el icono de búsqueda en dispositivos no móviles */}
-          <Image src={search} alt="search-oculto" width={20} height={20} />
-        </button>
-      )}
-        <input
-          className={`input rounded-full pl-${isMobile ? '8' : '10'} py-3 pr-${isMobile ? '10' : '12'} border-2 border-transparent focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-all duration-300 shadow-md bg-white`}
-          placeholder="Buscar por título..."
-          value={searchValue}
-          onChange={handleInputChange}
-          type="text"
-        />
-        {!isMobile && ( // Renderiza el botón de limpiar en dispositivos no móviles
-          <button className="btn-close text-gray-400 hover:text-red-600" type="reset" onClick={() => setSearchValue("")}>
-            <Image src={deleteicon} alt="icono-borrar" width={20} height={20} />
-          </button>
-        )}
-      </div>
-      {searchValue && (
-        <div className="custom-width-desplegable absolute left-0 right-0 mt-1 z-10 flex justify-center">
-      <div className="desplegable-search shadow-md py-4 px-6 rounded-md">
-        <div className="another-custom-search flex justify-between items-center mb-2">
-          <div className='custom-cards-gap'>
-            <p className="text-gray-400">[{juegosEncontrados.length}] Resultados para "{searchValue}"</p>
-            {!isMobile && ( // Renderiza el botón de cerrar en dispositivos no móviles
-              <button className='btn-close text-gray-400 hover:text-red-600' type="reset" onClick={() => setSearchValue("")}>
-                <FontAwesomeIcon  icon={faTimes} />
-              </button>
-            )}
-          </div>
-        </div>
-        <div className="juegos-encontrados-container">
-          {juegosEncontrados.map((juego, index) => (
-            <Link href="/game">
-              <div key={index} className="custom-item-juego-despliegue flex items-center gap-4 py-2">
-                <div className=" w-52 h-24 relative">
-                  <img src={juego.foto} alt="FotoJuegoSearch" className="object-cover w-full h-full rounded-md" />
-                </div>
-                <div className="flex-1">
-                  <p className="font-semibold">{juego.titulo}</p>
-                  <p>{juego.genero}</p>
-                </div>
-                <div>
-                  <p className="font-semibold">€{juego.precio}</p>
+          <form className="form">
+            <div className="relative">
+              {isMobile ? (
+                <button className='search-icon'>
+                  <Image src={search} alt="search-imagen" width={20} height={20} />
+                </button>
+              ) : (
+                <button className='search-icon hidden md:block'>
+                  <Image src={search} alt="search-oculto" width={20} height={20} />
+                </button>
+              )}
+              <input
+                className={`input rounded-full pl-${isMobile ? '8' : '10'} py-3 pr-${isMobile ? '10' : '12'} border-2 border-transparent focus:outline-none focus:border-blue-500 placeholder-gray-400 transition-all duration-300 shadow-md bg-white`}
+                placeholder="Buscar por título..."
+                value={searchValue}
+                onChange={handleInputChange}
+                type="text"
+              />
+              {!isMobile && (
+                <button className="btn-close text-gray-400 hover:text-red-600" type="reset" onClick={() => setSearchValue("")}>
+                  <Image src={deleteicon} alt="icono-borrar" width={20} height={20} />
+                </button>
+              )}
+            </div>
+            {searchValue && (
+              <div className="custom-width-desplegable absolute left-0 right-0 mt-1 z-10 flex justify-center">
+                <div className="desplegable-search shadow-md py-4 px-6 rounded-md">
+                  <div className="another-custom-search flex justify-between items-center mb-2">
+                    <div className='custom-cards-gap'>
+                      <p className="text-gray-400">[{juegosEncontrados.length}] Resultados para "{searchValue}"</p>
+                      {!isMobile && (
+                        <button className='btn-close text-gray-400 hover:text-red-600' type="reset" onClick={() => setSearchValue("")}>
+                          <FontAwesomeIcon  icon={faTimes} />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                  <div className="juegos-encontrados-container">
+                    {juegosEncontrados.map((juego, index) => (
+                      <Link href="/game" key={index}>
+                        <div className="custom-item-juego-despliegue flex items-center gap-4 py-2">
+                          <div className="w-52 h-24 relative">
+                            <img src={juego.foto} alt="FotoJuegoSearch" className="object-cover w-full h-full rounded-md" />
+                          </div>
+                          <div className="flex-1">
+                            <p className="font-semibold">{juego.titulo}</p>
+                            <p>{juego.genero}</p>
+                          </div>
+                          <div>
+                            <p className="font-semibold">€{juego.precio}</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-        </div>
-      )}
+            )}
           </form>
         </div>
         <button className="btn btn-ghost btn-circle">
