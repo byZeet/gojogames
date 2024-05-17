@@ -13,6 +13,16 @@
   background-color: transparent;
 }
 
+.color-custom-btn-carrito{
+  background-color: #3B82F6;
+  color: #fff;
+}
+
+.color-custom-btn-carrito:hover{
+  background-color: #ffffff;
+  color: black;
+}
+
 .navbar-scrolled {
   backdrop-filter: blur(60px) saturate(100%);
   -webkit-backdrop-filter: blur(60px) saturate(100%);
@@ -164,10 +174,33 @@
 }
 
 .desplegable-search {
-  background-color: rgba(21, 21, 21, 0.959); /* Color con menos opacidad */
+  background-color: #202020fa; /* Color con menos opacidad */
   backdrop-filter: blur(60px) saturate(100%);
   -webkit-backdrop-filter: blur(60px) saturate(100%);
   width: 600px;
+  max-height: 940px; /* Establece una altura máxima */
+  overflow-y: auto; /* Habilita el desplazamiento vertical */
+}
+
+.carrito-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 3px;
+    position: relative;
+    width: 300px;
+    right: 180px;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #202020fa; /* Color con menos opacidad */
+    backdrop-filter: blur(60px) saturate(100%);
+    -webkit-backdrop-filter: blur(60px) saturate(100%);
+    padding: 10px;
+}
+
+.card-game-carrito-nav{
+
+  height: 400px;
 }
 
 
@@ -212,11 +245,6 @@
 .juegos-encontrados-container {
   max-height: 761px; /* Establece una altura máxima para el contenido desplegable */
   overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido es demasiado largo */
-}
-
-.desplegable-search {
-  max-height: 940px; /* Establece una altura máxima */
-  overflow-y: auto; /* Habilita el desplazamiento vertical */
 }
 
 .search-icon {

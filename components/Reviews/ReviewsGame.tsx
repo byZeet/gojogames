@@ -13,7 +13,7 @@ export const ReviewsGame = () => {
         <div className='flex justify-center items-stretch custom-review-container w-full h-fit px-4 md:px-32 pt-10 pb-10'>
           <div className="flex flex-col md:flex-row gap-5 justify-center">
             {/* RESEÑAS */}
-            <div className="flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
+            <div className="cards-flex flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
               <div className="flex">
                 <div className="flex gap-4">
                   <img
@@ -47,7 +47,7 @@ export const ReviewsGame = () => {
               </div>
             </div>
             {/* RESEÑAS */}
-            <div className="flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
+            <div className="cards-flex flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
               <div className="flex">
                 <div className="flex gap-4">
                   <img
@@ -81,7 +81,7 @@ export const ReviewsGame = () => {
               </div>
             </div>
             {/* RESEÑAS */}
-            <div className="flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
+            <div className="cards-flex flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
               <div className="flex">
                 <div className="flex gap-4">
                   <img
@@ -115,7 +115,7 @@ export const ReviewsGame = () => {
               </div>
             </div>
             {/* RESEÑAS */}
-            <div className="flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
+            <div className="cards-flex flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
               <div className="flex">
                 <div className="flex gap-4">
                   <img
@@ -149,7 +149,7 @@ export const ReviewsGame = () => {
               </div>
             </div>
             {/* RESEÑAS */}
-            <div className="flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
+            <div className="cards-flex flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
               <div className="flex">
                 <div className="flex gap-4">
                   <img

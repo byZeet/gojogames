@@ -148,9 +148,12 @@ export default function Navbar() {
       </div>
         </div>
       
-        <div className="dropdown-center mt-3 z-[1] card card-compact dropdown-content max-w-[400px] bg-base-100 shadow">
-        <div className="">
-          <Link href="/payment"><button className="btn btn-primary btn-block">Ver Carrito</button></Link>
+        <div className="dropdown-center mt-3 z-[1] card card-compact dropdown-content max-w-[400px] ">
+        <div className="carrito-container">
+          <div className="card-game-carrito-nav">
+            
+          </div>
+          <Link href="/payment"><button className="btn color-custom-btn-carrito btn-block">Ver Carrito</button></Link>
         </div>
         </div>
          
