@@ -5,16 +5,16 @@ import './CardCategory.scss';
 /**
   * WALLPAPERS IMPORTS
 */
-import wallpaperaccion from '../../public/assets/img/wallpaperaccion.svg'
+import wallpaperaccion from '../../public/assets/img/wallpaperaccion.png'
 import wallpaperarcade from '../../public/assets/img/wallpaperarcade.svg'
-import wallpaperaventura from '../../public/assets/img/wallpaperaventura.svg'
+import wallpaperaventura from '../../public/assets/img/wallpaperaventura.png'
 import wallpapercoop from '../../public/assets/img/wallpapercoop.svg'
 import wallpaperfps from '../../public/assets/img/wallpaperfps.svg'
 import wallpaperindie from '../../public/assets/img/wallpaperindie.svg'
 import wallpaperlucha from '../../public/assets/img/wallpaperlucha.svg'
 import wallpaperrpg from '../../public/assets/img/wallpaperrpg.svg'
 import wallpapersimulacion from '../../public/assets/img/wallpapersimulacion.svg'
-import wallpaperdeporte from '../../public/assets/img/wallpaperdeporte.svg'
+import wallpaperdeporte from '../../public/assets/img/wallpaperdeporte.png'
 import wallpapermmo from '../../public/assets/img/wallpapermmo.svg'
 import wallpapergestion from '../../public/assets/img/wallpapergestion.svg'
 /**
