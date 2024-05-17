@@ -38,13 +38,13 @@ const OfertsGame = () => {
           {/* CARDS DESCUENTOS */}
           {juegos.map((juego: Juego, index: number) => (
             <div key={index} className='card w-120 custom-bg-color shadow'>
-              <Link href="/game">
+              <Link href="/">
                 <figure>
                   <img src={juego.foto} alt='FotoJuego' />
                 </figure>
               </Link>
               <div className='card-body gap-5'>
-              <Link href="/game">
+              <Link href="/">
                   <h2 className='card-title w-auto text-neutral-100'>{juego.titulo}</h2>
                 </Link>
                 <div className='container-badge flex flex-wrap gap-2'>

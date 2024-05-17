@@ -40,13 +40,13 @@ const CardGame = () => {
         <div className="w-fit h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-5 pl-32 pr-32">
           {juegos.map((juego: Juego, index: number) => (
             <div key={index} className="card w-full custom-bg-color shadow">
-              <Link href="/game">
+              <Link href="/">
                 <figure>
                   <img src={juego.foto} alt="imagen-juego-card" />
                 </figure>
               </Link>
               <div className="card-body gap-5">
-                <Link href="/game">
+                <Link href="/">
                   <h2 className="card-title w-auto text-neutral-100">{juego.titulo}</h2>
                 </Link>
                 <div className="container-badge flex flex-wrap gap-2">

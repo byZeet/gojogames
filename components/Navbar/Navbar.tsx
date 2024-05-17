@@ -113,7 +113,7 @@ export default function Navbar() {
                   </div>
                   <div className="juegos-encontrados-container">
                     {juegosEncontrados.map((juego, index) => (
-                      <Link href="/game" key={index}>
+                      <Link href="/" key={index}>
                         <div className="custom-item-juego-despliegue flex items-center gap-4 py-2">
                           <div className="w-52 h-24 relative">
                             <img src={juego.foto} alt="FotoJuegoSearch" className="object-cover w-full h-full rounded-md" />

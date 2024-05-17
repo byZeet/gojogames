@@ -6,7 +6,6 @@ import arrowright from '../../public/assets/icons/arrow-next-small-svgrepo-com.s
 import Link from 'next/link';
 import './NextLaunchGame.scss';
 
-
 import { getJuegosProximos } from '@/lib/actions/juegos.actions';
 import { Juego } from '@/types';
 
@@ -32,23 +31,22 @@ const NextLaunchGame = () => {
       <div className='flex w-full justify-center mb-10'></div>
       <div className='flex justify-center items-center mb-10'>
         <div className='w-fit h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-5 pl-32 pr-32 pb-20'>
-          {/* CARDS DESCUENTOS */}
           {juegos.map((juego: Juego, index: number) => (
             <div key={index} className='card w-120 custom-bg-color shadow'>
-              <Link href="/game">
+              <Link href="/">
                 <figure>
                   <img src={juego.foto} alt='FotoJuegosLaunch' />
                 </figure>
               </Link>
               <div className='card-body custom-card-nextlaunch gap-5'>
-              <Link href="/game">
+                <Link href="/">
                   <h2 className='card-title w-auto text-neutral-100'>{juego.titulo}</h2>
                 </Link>
                 <div className='card-actions justify-between items-center'>
                   <div className='full-width-blue flex justify-between items-center p-3'>
                     <div>
-                      <label className='container-nextlaunch'>
-                        <input type='checkbox' defaultChecked={true} />
+                      <label className='container-nextlaunch' htmlFor={`checkbox-${index}`}>
+                        <input id={`checkbox-${index}`} type='checkbox' defaultChecked={true} />
                         <svg
                           className='bell-regular'
                           xmlns='http://www.w3.org/2000/svg'
@@ -77,8 +75,8 @@ const NextLaunchGame = () => {
                       <p className='text-neutral-100 mb-0 ml-2'>{juego.fecha}</p>
                     </div>
                     <div>
-                      <label className='ui-bookmark'>
-                        <input type='checkbox' />
+                      <label className='ui-bookmark' htmlFor={`checkbox-bookmark-${index}`}>
+                        <input id={`checkbox-bookmark-${index}`} type='checkbox' />
                         <div className='bookmark'>
                           <svg
                             viewBox='0 0 16 16'
