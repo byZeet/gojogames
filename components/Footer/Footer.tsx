@@ -14,9 +14,7 @@ import twitch from '../../public/assets/icons/twitch.svg';
 import youtube from '../../public/assets/icons/youtube.svg';
 import securepay from '../../public/assets/icons/securepay.svg';
 
-import Australia from '../../public/assets/img/australia.png';
 import España from '../../public/assets/img/espana.png';
-import Canada from '../../public/assets/img/canada.png';
 import Japon from '../../public/assets/img/Japon.png';
 import Reinounido from '../../public/assets/img/reino-unido.png';
 import USA from '../../public/assets/img/estados-unidos.png';
@@ -141,18 +139,6 @@ export const Footer = () => {
                           <Image src={Japon} alt='icono-japon' />
                         </div>
                         <h3 onClick={() => handleCountrySelect('Japón', 'Japonés', 'JPY')} className={`cursor-pointer ${selectedCountry === 'Japón' ? 'text-white' : 'hover:text-white'}`}>Japón (JPY)</h3>
-                      </div>
-                      <div className="flex gap-1">
-                        <div style={{ width: '24px', height: 'auto' }}>
-                          <Image src={Canada} alt='icono-canada' />
-                        </div>
-                        <h3 onClick={() => handleCountrySelect('Canadá', 'Inglés/Francés', 'CAD')} className={`cursor-pointer ${selectedCountry === 'Canadá' ? 'text-white' : 'hover:text-white'}`}>Canadá (CAD)</h3>
-                      </div>
-                      <div className="flex gap-1">
-                        <div style={{ width: '24px', height: 'auto' }}>
-                          <Image src={Australia} alt='icono-australia' />
-                        </div>
-                        <h3 onClick={() => handleCountrySelect('Australia', 'Inglés', 'AUD')} className={`cursor-pointer ${selectedCountry === 'Australia' ? 'text-white' : 'hover:text-white'}`}>Australia (AUD)</h3>
                       </div>
                     </div>
                   </div>
