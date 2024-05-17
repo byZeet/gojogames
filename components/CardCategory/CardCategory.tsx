@@ -49,7 +49,7 @@ export const CardCategory = () => {
         <div className="w-fit h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-14 p-4 sm:p-16">
           {/* ACCION */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpaperaccion} alt='foto-accion' layout="responsive" width={350} height={200} className="background-image rounded-lg"/>
+            <Image src={wallpaperaccion} alt='foto-accion' width={350} height={200} className="background-image rounded-lg"/>
             <div className="card-container">
               <Image src={accionmain} alt='foto-main.accion' className="foreground-image"/>
             </div>
@@ -59,7 +59,7 @@ export const CardCategory = () => {
           </div>
           {/* AVENTURA */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpaperaventura} alt='foto-aventura' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpaperaventura} alt='foto-aventura' width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container">
               <Image src={aventuramain} alt='foto-main-aventura' className="foreground-image"/>
             </div>
@@ -69,7 +69,7 @@ export const CardCategory = () => {
           </div>
           {/* ARCADE */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpaperarcade} alt='foto-arcade' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpaperarcade} alt='foto-arcade' width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-arcade">
               <Image src={arcademain} alt='foto-main-arcade' className="foreground-image"/>
             </div>
@@ -79,7 +79,7 @@ export const CardCategory = () => {
           </div>
           {/* FPS */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpaperfps} alt='foto-fps' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpaperfps} alt='foto-fps' width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container">
               <Image src={fpsmain} alt='foto-main-fps' className="foreground-image"/>
             </div>
@@ -89,7 +89,7 @@ export const CardCategory = () => {
           </div>
           {/* INDIES */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpaperindie} alt='foto-indie' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpaperindie} alt='foto-indie' width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-indies">
               <Image src={indiesmain} alt='foto-main-indie' className="foreground-image"/>
             </div>
@@ -99,7 +99,7 @@ export const CardCategory = () => {
           </div>
           {/* SIMULACIÓN */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpapersimulacion} alt='foto-simulacion' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpapersimulacion} alt='foto-simulacion' width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-simulacion">
               <Image src={simulacionmain} alt='foto-main-simulacion' className="foreground-image"/>
             </div>
@@ -109,7 +109,7 @@ export const CardCategory = () => {
           </div>
           {/* LUCHA */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpaperlucha} alt='foto-lucha' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpaperlucha} alt='foto-lucha' width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-lucha">
               <Image src={luchamain} alt='foto-main-lucha' className="foreground-image"/>
             </div>
@@ -119,7 +119,7 @@ export const CardCategory = () => {
           </div>
           {/* RPG */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpaperrpg} alt='foto-rpg' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpaperrpg} alt='foto-rpg' width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-rpg">
               <Image src={rpgmain} alt='foto-main-rpg' className="foreground-image"/>
             </div>
@@ -129,7 +129,7 @@ export const CardCategory = () => {
           </div>
           {/* COOP ONLINE */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpapercoop} alt='foto-coop' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpapercoop} alt='foto-coop' width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-coop">
               <Image src={coopmain} alt='foto-main-coop' className="foreground-image"/>
             </div>
@@ -139,7 +139,7 @@ export const CardCategory = () => {
           </div>
           {/* DEPORTE */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpaperdeporte} alt='foto-deporte' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpaperdeporte} alt='foto-deporte' width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-deporte">
               <Image src={deportemain} alt='foto-main-deporte' className="foreground-image"/>
             </div>
@@ -149,7 +149,7 @@ export const CardCategory = () => {
           </div>
           {/* GESTIÓN */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpapergestion} alt='foto-gestion' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpapergestion} alt='foto-gestion' width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-gestion">
               <Image src={gestionmain} alt='foto-main-gestion' className="foreground-image"/>
             </div>
@@ -159,7 +159,7 @@ export const CardCategory = () => {
           </div>
           {/* MMO */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpapermmo} alt='foto-mmo' layout="responsive" width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpapermmo} alt='foto-mmo' width={425} height={240} className="background-image rounded-lg"/>
             <div className="card-container custom-mmo">
               <Image src={coopmain} alt='foto-main-mmo' className="foreground-image"/>
             </div>

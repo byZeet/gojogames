@@ -4,6 +4,12 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShare } from '@fortawesome/free-solid-svg-icons';
 import './ReviewsGame.scss'
+import Image from 'next/image';
+import Image1 from '../../public/assets/img/Card_Image_1.jpg'
+import Image2 from '../../public/assets/img/Card_Image_2.jpg'
+import Image3 from '../../public/assets/img/Card_Image_3.jpg'
+import Image4 from '../../public/assets/img/Card_Image_4.jpg'
+import Image5 from '../../public/assets/img/Card_Image_5.jpg'
 
 export const ReviewsGame = () => {
   return (
@@ -16,11 +22,7 @@ export const ReviewsGame = () => {
             <div className="cards-flex flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
               <div className="flex">
                 <div className="flex gap-4">
-                  <img
-                    src="https://i.pinimg.com/originals/62/90/d2/6290d211c952cbc609553f8cec8ef0f2.jpg"
-                    alt="ImagenUsuarioCardUno"
-                    className="w-16 h-16 rounded-full"
-                  />
+                <Image src={Image2} alt='foto-card-1' width={64} height={64} className="rounded-full fit-content"/>
                   <div className="flex flex-col gap-1">
                     <div className="flex gap-3 items-center -mt-1">
                       <p className="font-semibold cursor-pointer text-[#3B82F6]">DJPalos</p>
@@ -50,11 +52,9 @@ export const ReviewsGame = () => {
             <div className="cards-flex flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
               <div className="flex">
                 <div className="flex gap-4">
-                  <img
-                    src="https://i.pinimg.com/736x/b1/1f/17/b11f17eb4b20068aebe32298905ba567.jpg"
-                    alt="ImagenUsuarioCardDos"
-                    className="w-16 h-16 rounded-full"
-                  />
+                  <div>
+                    <Image src={Image1} alt='foto-card-2' width={64} height={64} className="rounded-full fit-content"/>
+                  </div>
                   <div className="flex flex-col gap-1">
                     <div className="flex gap-3 items-center -mt-1">
                       <p className="font-semibold cursor-pointer text-[#3B82F6]">MrBossFTW</p>
@@ -84,11 +84,7 @@ export const ReviewsGame = () => {
             <div className="cards-flex flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
               <div className="flex">
                 <div className="flex gap-4">
-                  <img
-                    src="https://i.pinimg.com/736x/ac/64/c3/ac64c3005563ae21fb7da7f4b23dc561.jpg"
-                    alt="ImagenUsuarioCardTres"
-                    className="w-16 h-16 rounded-full"
-                  />
+                <Image src={Image3} alt='foto-card-3' width={64} height={64} className="rounded-full fit-content"/>
                   <div className="flex flex-col gap-1">
                     <div className="flex gap-3 items-center -mt-1">
                       <p className="font-semibold cursor-pointer text-[#3B82F6]">Papimiauw</p>
@@ -118,11 +114,7 @@ export const ReviewsGame = () => {
             <div className="cards-flex flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
               <div className="flex">
                 <div className="flex gap-4">
-                  <img
-                    src="https://i.pinimg.com/736x/fb/4c/ea/fb4cea3eaf64a85c3cab08f861244d5d.jpg"
-                    alt="ImagenUsuarioCardCuatro"
-                    className="w-16 h-16 rounded-full"
-                  />
+                <Image src={Image4} alt='foto-card-4' width={64} height={64} className="rounded-full fit-content"/>
                   <div className="flex flex-col gap-1">
                     <div className="flex gap-3 items-center -mt-1">
                       <p className="font-semibold cursor-pointer text-[#3B82F6]">GatoLoko</p>
@@ -152,11 +144,7 @@ export const ReviewsGame = () => {
             <div className="cards-flex flex flex-col p-5 rounded-2xl bg-[rgba(18,18,18,0.75)] backdrop-blur-lg backdrop-filter backdrop-opacity-70" style={{ width: "100%", maxWidth: "360px" }}>
               <div className="flex">
                 <div className="flex gap-4">
-                  <img
-                    src="https://pm1.aminoapps.com/7614/830b4c19054ecb643b526e8ed682325f25167b7ar1-700-708v2_uhq.jpg"
-                    alt="ImagenUsuarioCardCinco"
-                    className="w-16 h-16 rounded-full"
-                  />
+                <Image src={Image5} alt='foto-card-5' width={64} height={64} className="rounded-full fit-content"/>
                   <div className="flex flex-col gap-1">
                     <div className="flex gap-3 items-center -mt-1">
                       <p className="font-semibold cursor-pointer text-[#3B82F6]">Requeson221</p>

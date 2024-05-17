@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState } from 'react';
 import Image from 'next/image';
 import mastercard from '../../public/assets/icons/mastercard.svg';
@@ -22,7 +21,7 @@ import Japon from '../../public/assets/img/Japon.png';
 import Reinounido from '../../public/assets/img/reino-unido.png';
 import USA from '../../public/assets/img/estados-unidos.png';
 
-import './Footer.scss'
+import './Footer.scss';
 
 export const Footer = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -59,7 +58,7 @@ export const Footer = () => {
           </div>
           <div>
             <h1 className=' text-xl'>Comunidad</h1>
-            <div className='mt-3'  style={{ color: '#7D7D7D' }}>
+            <div className='mt-3' style={{ color: '#7D7D7D' }}>
               <p>FAQ</p>
               <p>Contacto</p>
               <p>Programa BETA Games</p>
@@ -68,21 +67,37 @@ export const Footer = () => {
           <div>
             <h1 className=' text-xl'>Métodos de pago</h1>
             <div className='flex mt-3 gap-2'>
-              <Image src={visa} alt='icono-visa' width={50} height={50}/>
-              <Image src={mastercard} alt='icono-mastercard' width={50} height={50}/>
-              <Image src={paypal} alt='icono-paypal' width={50} height={50}/>
+              <div style={{ width: '50px', height: 'auto' }}>
+                <Image src={visa} alt='icono-visa' />
+              </div>
+              <div style={{ width: '50px', height: 'auto' }}>
+                <Image src={mastercard} alt='icono-mastercard' />
+              </div>
+              <div style={{ width: '50px', height: 'auto' }}>
+                <Image src={paypal} alt='icono-paypal' />
+              </div>
             </div>
           </div>
-          <div>
-            <Image src={securepay} alt='icono-securepay' width={230} height={50}/>
+          <div style={{ width: '230px', height: 'auto' }}>
+            <Image src={securepay} alt='icono-securepay' />
           </div>
         </div>
         <div className='flex justify-center gap-5 mt-10 mb-4'>
-          <Image src={instagram} alt='icono-insta' width={35} height={35} className='hover:transform hover:translate-y-[-8px] transition-transform duration-300'/>
-          <Image src={x} alt='icono-x' width={35} height={35} className='hover:transform hover:translate-y-[-8px] transition-transform duration-300'/>
-          <Image src={discord} alt='icono-discord' width={35} height={35} className='hover:transform hover:translate-y-[-8px] transition-transform duration-300'/>
-          <Image src={twitch} alt='icono-twitch' width={35} height={35} className='hover:transform hover:translate-y-[-8px] transition-transform duration-300'/>
-          <Image src={youtube} alt='icono-youtube' width={35} height={35} className='hover:transform hover:translate-y-[-8px] transition-transform duration-300'/>
+          <div style={{ width: '35px', height: 'auto' }}>
+            <Image src={instagram} alt='icono-insta' className='hover:transform hover:translate-y-[-8px] transition-transform duration-300' />
+          </div>
+          <div style={{ width: '35px', height: 'auto' }}>
+            <Image src={x} alt='icono-x' className='hover:transform hover:translate-y-[-8px] transition-transform duration-300' />
+          </div>
+          <div style={{ width: '35px', height: 'auto' }}>
+            <Image src={discord} alt='icono-discord' className='hover:transform hover:translate-y-[-8px] transition-transform duration-300' />
+          </div>
+          <div style={{ width: '35px', height: 'auto' }}>
+            <Image src={twitch} alt='icono-twitch' className='hover:transform hover:translate-y-[-8px] transition-transform duration-300' />
+          </div>
+          <div style={{ width: '35px', height: 'auto' }}>
+            <Image src={youtube} alt='icono-youtube' className='hover:transform hover:translate-y-[-8px] transition-transform duration-300' />
+          </div>
         </div>
 
         <hr className=" mx-20" style={{ color: '#7D7D7D' }} /> {/* Aquí se añade la línea divisoria */}
@@ -94,7 +109,9 @@ export const Footer = () => {
             <div className='md:order-1 flex flex-col md:flex-row gap-2 justify-center md:justify-end'>
               <div className="relative">
                 <div onClick={() => setDropdownOpen(!dropdownOpen)} className="cursor-pointer flex items-center gap-2">
-                  <Image src={location} alt='icono-location' width={20} height={20}/>
+                  <div style={{ width: '20px', height: 'auto' }}>
+                    <Image src={location} alt='icono-location' />
+                  </div>
                   <h3 style={{ color: '#ffffff' }}>{selectedCountry || 'Seleccionar país'}</h3>
                 </div>
                 {dropdownOpen && (
@@ -102,27 +119,39 @@ export const Footer = () => {
                     {/* Aquí puedes agregar los otros países que se mostrarán en el desplegable */}
                     <div className="flex flex-col gap-1">
                       <div className='flex gap-1'>
-                        <Image src={España} alt='icono-españa' width={24} height={24}/>
+                        <div style={{ width: '24px', height: 'auto' }}>
+                          <Image src={España} alt='icono-españa' />
+                        </div>
                         <h3 onClick={() => handleCountrySelect('España', 'Español', 'EUR')} className={`cursor-pointer ${selectedCountry === 'España' ? 'text-white' : 'hover:text-white'}`}>España (EUR)</h3>
                       </div>
                       <div className="flex gap-1">
-                        <Image src={USA} alt='icono-usa' width={24} height={24} />
+                        <div style={{ width: '24px', height: 'auto' }}>
+                          <Image src={USA} alt='icono-usa' />
+                        </div>
                         <h3 onClick={() => handleCountrySelect('Estados Unidos', 'Inglés', 'USD')} className={`cursor-pointer ${selectedCountry === 'Estados Unidos' ? 'text-white' : 'hover:text-white'}`}>Estados Unidos (USD)</h3>
                       </div>
                       <div className="flex gap-1">
-                        <Image src={Reinounido} alt='icono-reinounido' width={24} height={24} />
+                        <div style={{ width: '24px', height: 'auto' }}>
+                          <Image src={Reinounido} alt='icono-reinounido' />
+                        </div>
                         <h3 onClick={() => handleCountrySelect('Reino Unido', 'Inglés', 'GBP')} className={`cursor-pointer ${selectedCountry === 'Reino Unido' ? 'text-white' : 'hover:text-white'}`}>Reino Unido (GBP)</h3>
                       </div>
                       <div className="flex gap-1">
-                        <Image src={Japon} alt='icono-japon' width={24} height={24} />
+                        <div style={{ width: '24px', height: 'auto' }}>
+                          <Image src={Japon} alt='icono-japon' />
+                        </div>
                         <h3 onClick={() => handleCountrySelect('Japón', 'Japonés', 'JPY')} className={`cursor-pointer ${selectedCountry === 'Japón' ? 'text-white' : 'hover:text-white'}`}>Japón (JPY)</h3>
                       </div>
                       <div className="flex gap-1">
-                        <Image src={Canada} alt='icono-canada' width={24} height={24} />
+                        <div style={{ width: '24px', height: 'auto' }}>
+                          <Image src={Canada} alt='icono-canada' />
+                        </div>
                         <h3 onClick={() => handleCountrySelect('Canadá', 'Inglés/Francés', 'CAD')} className={`cursor-pointer ${selectedCountry === 'Canadá' ? 'text-white' : 'hover:text-white'}`}>Canadá (CAD)</h3>
                       </div>
                       <div className="flex gap-1">
-                        <Image src={Australia} alt='icono-australia' width={24} height={24} />
+                        <div style={{ width: '24px', height: 'auto' }}>
+                          <Image src={Australia} alt='icono-australia' />
+                        </div>
                         <h3 onClick={() => handleCountrySelect('Australia', 'Inglés', 'AUD')} className={`cursor-pointer ${selectedCountry === 'Australia' ? 'text-white' : 'hover:text-white'}`}>Australia (AUD)</h3>
                       </div>
                     </div>
@@ -131,10 +160,14 @@ export const Footer = () => {
               </div>
 
               <h3>| </h3>
-              <Image src={language} alt='icono-lenguaje' width={20} height={20}/>
+              <div style={{ width: '20px', height: 'auto' }}>
+                <Image src={language} alt='icono-lenguaje' />
+              </div>
               <h3 style={{ color: '#ffffff' }}>{selectedLanguage}</h3>
               <h3>| </h3>
-              <Image src={currency} alt='icono-moneda' width={20} height={20}/>
+              <div style={{ width: '20px', height: 'auto' }}>
+                <Image src={currency} alt='icono-moneda' />
+              </div>
               <h3 style={{ color: '#ffffff' }}>{selectedCurrency}</h3>
             </div>
           </div>
