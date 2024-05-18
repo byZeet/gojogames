@@ -1,3 +1,4 @@
+// app/(root)/NextLaunchGame.tsx
 'use client'
 
 import React, { useEffect, useState } from 'react';
@@ -33,13 +34,13 @@ const NextLaunchGame = () => {
         <div className='w-fit h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-5 pl-32 pr-32 pb-20'>
           {juegos.map((juego: Juego, index: number) => (
             <div key={index} className='card w-120 custom-bg-color shadow'>
-              <Link href="/">
+              <Link href={`/games/${juego._id}`}>
                 <figure>
                   <img className='img-redondeada' src={juego.foto} alt='FotoJuegosLaunch' />
                 </figure>
               </Link>
               <div className='card-body custom-card-nextlaunch gap-5'>
-                <Link href="/">
+                <Link href={`/games/${juego._id}`}>
                   <h2 className='card-title w-auto text-neutral-100'>{juego.titulo}</h2>
                 </Link>
                 <div className='card-actions justify-between items-center'>

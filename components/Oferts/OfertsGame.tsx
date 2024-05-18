@@ -1,3 +1,4 @@
+// app/(root)/OfertsGame.tsx
 'use client'
 
 import React, { useEffect, useState } from 'react';
@@ -38,13 +39,13 @@ const OfertsGame = () => {
           {/* CARDS DESCUENTOS */}
           {juegos.map((juego: Juego, index: number) => (
             <div key={index} className='card w-120 custom-bg-color shadow'>
-              <Link href="/">
+              <Link href={`/games/${juego._id}`}>
                 <figure>
                   <img className='img-redondeada' src={juego.foto} alt='FotoJuego' />
                 </figure>
               </Link>
               <div className='card-body gap-5'>
-              <Link href="/">
+                <Link href={`/games/${juego._id}`}>
                   <h2 className='card-title w-auto text-neutral-100'>{juego.titulo}</h2>
                 </Link>
                 <div className='container-badge flex flex-wrap gap-2'>

@@ -1,16 +1,19 @@
 import { Types } from "mongoose";
 
-export type Juego = {
+export interface Juego {
+  _id: string;
   titulo: string;
-  precio: number;
   genero: string;
+  precio: number;
   foto: string;
   demo_disponible: boolean;
   dlc: boolean;
-  oferta: number;
-  oferta_aplicada:number; 
+  oferta: boolean;
+  oferta_aplicada: number;
   precio_original: number;
   stock: boolean;
   tiempo_restante: string;
-  fecha: string;
-};
+  fecha?: string;
+  descripcion: string;
+  imagenes?: string[];
+}

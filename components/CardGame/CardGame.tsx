@@ -1,20 +1,21 @@
+// components/CardGame.tsx
 'use client'
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons'; // Eliminado el import de faTimes, ya que no se está utilizando
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import './CardGame.scss';
 
 import cartplus from '../../public/assets/icons/cart-plus-svgrepo-com.svg';
-import cartcheck from '../../public/assets/icons/cart-check-svgrepo-com.svg'
+import cartcheck from '../../public/assets/icons/cart-check-svgrepo-com.svg';
 import arrowright from '../../public/assets/icons/arrow-next-small-svgrepo-com.svg';
 
 import { getJuegos } from '@/lib/actions/juegos.actions';
 import { Juego } from '@/types';
 
-const CardGame = () => {
+const CardGame: React.FC = () => {
   const [juegos, setJuegos] = useState<Juego[]>([]);
 
   useEffect(() => {
@@ -40,13 +41,13 @@ const CardGame = () => {
         <div className="w-fit h-fit grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-5 pl-32 pr-32">
           {juegos.map((juego: Juego, index: number) => (
             <div key={index} className="card w-full custom-bg-color shadow">
-              <Link href="/">
+              <Link href={`/games/${juego._id}`}>
                 <figure>
                   <img className='img-redondeada' src={juego.foto} alt="imagen-juego-card" />
                 </figure>
               </Link>
               <div className="card-body gap-5">
-                <Link href="/">
+                <Link href={`/games/${juego._id}`}>
                   <h2 className="card-title w-auto text-neutral-100">{juego.titulo}</h2>
                 </Link>
                 <div className="container-badge flex flex-wrap gap-2">
