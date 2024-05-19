@@ -137,11 +137,11 @@ export default async function GamePage({ params }: GamePageProps) {
                 <h2 className="text-2xl font-semibold mb-2">Acerca de</h2>
                 <p className="text-sm lg:text-md mb-4">{game.descripcion}</p>
               </div>
-              <div className="flex gap-2 mt-4">
-                <button className="w-1/2 h-16 bg-[#3B82F6] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-[20px] flex items-center justify-center gap-2">
+              <div className="flex justify-center gap-2 mt-4">
+                {/* <button className="w-1/2 h-16 bg-[#3B82F6] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-[20px] flex items-center justify-center gap-2">
                   <Image src={cartplus} alt="Añadir al Carrito" width={20} height={20} />
                   Añadir al Carrito
-                </button>
+                </button> */}
                 <label className="w-1/2 h-16 bg-white hover:bg-gray-200 text-black font-bold py-2 px-4 rounded-[20px] flex items-center justify-center gap-2 ui-bookmark-game cursor-pointer">
                   <input type="checkbox" className="hidden" />
                   <div className="bookmark-game">

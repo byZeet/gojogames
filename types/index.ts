@@ -17,3 +17,13 @@ export interface Juego {
   descripcion: string;
   imagenes?: string[];
 }
+
+export interface CartItem {
+  productId: Juego;
+  quantity: number;
+}
+
+export interface Cart {
+  userId: string;
+  items: CartItem[];
+}

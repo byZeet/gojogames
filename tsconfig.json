@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/connection.js", "lib/models/movies.models.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/connection.js", "lib/models/movies.models.js", "scripts/testCartCreation.js"],
   "exclude": ["node_modules"]
 }
