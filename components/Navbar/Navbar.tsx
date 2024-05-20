@@ -328,7 +328,7 @@ export default function Navbar() {
                               <p className="text-white text-lg mt-4">Carrito vacío</p>
                               <button className="w-full bg-blue-500 text-white hover:bg-blue-600 py-2 rounded-lg mt-4 flex justify-center items-center">
                                 <FontAwesomeIcon icon={faClipboardList} className="mr-2" />
-                                <Link href="/myorders"><span>Mis Pedidos</span></Link>
+                                <span>Mis Pedidos</span>
                               </button>
                             </div>
                           ) : (
@@ -381,7 +381,7 @@ export default function Navbar() {
                                 </button>
                                 <button className="w-full bg-blue-500 text-white hover:bg-blue-600 py-2 rounded-lg mt-2 flex justify-center items-center">
                                   <FontAwesomeIcon icon={faClipboardList} className="mr-2" />
-                                  <Link href="/myorders"><span>Mis Pedidos</span></Link>
+                                  <span>Mis Pedidos</span>
                                 </button>
                               </div>
                             </>
