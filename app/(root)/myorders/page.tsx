@@ -6,6 +6,9 @@ import { useUser } from '@clerk/nextjs';
 import { getOrdersByClerkId } from '../../../lib/actions/orders.actions';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+import Link from 'next/link';
+import Image from 'next/image';
+import arrowleft from '../../../public/assets/icons/arrow-prev-small-svgrepo-com.svg'; // Asegúrate de tener la ruta correcta para la imagen
 import './Orders.scss';
 
 const Loader = () => (
@@ -95,6 +98,12 @@ const Orders = () => {
     <main className="min-h-screen bg-[#151515] py-20">
       <div className="flex justify-center py-8 px-4">
         <div className="w-full max-w-[1500px]">
+          <div className="mb-4 flex justify-start custom-margin-button-games">
+            <Link href="/" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-[20px] flex items-center gap-2">
+              <Image src={arrowleft} alt="Volver atrás" width={20} height={20} />
+              <span>Volver atrás</span>
+            </Link>
+          </div>
           <h2 className="text-2xl font-semibold mb-4 text-white">Mis Pedidos</h2>
           {orders.length === 0 ? (
             <p className="custom-subtext-orders">No tienes pedidos aún.</p>
