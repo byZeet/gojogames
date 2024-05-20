@@ -17,3 +17,15 @@ export async function createOrders(clerkId: string, compra_juego: { titulo: stri
         throw new Error("Error creating order");
     }
 }
+
+
+export async function getOrdersByClerkId(clerkId: string) {
+    try {
+        await mongoConnect();
+        const orders = await Order.find({ clerkId });
+        return orders.map(order => order.toObject()); // Convertir a objetos planos
+    } catch (error) {
+        console.log(error);
+        throw new Error("Error retrieving orders");
+    }
+}

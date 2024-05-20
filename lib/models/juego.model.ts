@@ -14,7 +14,7 @@ const juegoSchema = new Schema({
   stock: { type: Boolean, required: true },
   tiempo_restante: { type: String, required: true },
   fecha: { type: String, required: true },
-  imagenes: { type: [String], required: false },  // Nuevo campo
+  imagenes: { type: [String], required: false },
 });
 
 const Juego = models.Juego || model("Juego", juegoSchema);

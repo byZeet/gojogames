@@ -13,7 +13,7 @@ const orderSchema = new Schema({
     }],
     precio_total: { type: Number, required: true, min: 1 }
 }, {
-    toObject: { virtuals: true }, // Asegurarse de que se convierta a objeto plano
+    toObject: { virtuals: true }, // Asegurar de que se convierta a objeto plano
     toJSON: { virtuals: true }
 });
 
