@@ -1,50 +1,69 @@
-import { mongoConnect } from '../connection';
-import Cart from '../models/cart.model';
+// lib/actions/cart.actions.ts
+import { ObjectId } from 'mongoose';
+import CartModel from '../models/cart.model'; // Renombrar la importación del modelo
+import PurchaseModel from '../models/purchase.model';
 import User from '../models/user.model';
-import Juego from '../models/juego.model';
-import { Cart as CartType, CartItem as CartItemType } from '@/types';
+import { mongoConnect } from '../connection';
+import { CartItem, Cart as CartType, Purchase as PurchaseType } from '../../types/index'; // Ruta correcta
 
-export const addToCart = async (clerkId: string, productId: string, quantity: number): Promise<CartType> => {
-  await mongoConnect();
+export async function addToCart(userId: ObjectId, productId: ObjectId, quantity: number = 1): Promise<CartType> {
+    await mongoConnect();
 
-  const user = await User.findOne({ clerkId });
-  if (!user) {
-    throw new Error('User not found');
-  }
+    let cart = await CartModel.findOne({ userId });
 
-  const juego = await Juego.findById(productId);
-  if (!juego) {
-    throw new Error('Juego not found');
-  }
+    if (!cart) {
+        cart = new CartModel({ userId, items: [] });
+    }
 
-  let cart = await Cart.findOne({ userId: user._id });
+    const existingItemIndex = cart.items.findIndex(
+        (item: CartItem) => item.productId.toString() === productId.toString()
+    );
 
-  if (!cart) {
-    cart = new Cart({ userId: user._id, items: [] });
-  }
+    if (existingItemIndex !== -1) {
+        cart.items[existingItemIndex].quantity += quantity;
+    } else {
+        cart.items.push({ productId, quantity });
+    }
 
-  const itemIndex = cart.items.findIndex((item: CartItemType) => item.productId.toString() === productId);
+    await cart.save();
+    return cart;
+}
 
-  if (itemIndex > -1) {
-    cart.items[itemIndex].quantity += quantity;
-  } else {
-    cart.items.push({ productId, quantity });
-  }
+export async function removeFromCart(userId: ObjectId, productId: ObjectId): Promise<CartType | null> {
+    await mongoConnect();
 
-  await cart.save();
+    const cart = await CartModel.findOne({ userId });
 
-  return cart.populate('items.productId').execPopulate(); // Ensure populated data is returned
-};
+    if (!cart) return null;
 
-export const getCart = async (clerkId: string): Promise<CartType | null> => {
-  await mongoConnect();
+    cart.items = cart.items.filter(
+        (item: CartItem) => item.productId.toString() !== productId.toString()
+    );
 
-  const user = await User.findOne({ clerkId });
-  if (!user) {
-    throw new Error('User not found');
-  }
+    await cart.save();
+    return cart;
+}
 
-  const cart = await Cart.findOne({ userId: user._id }).populate('items.productId');
+export async function purchaseCart(userId: ObjectId): Promise<PurchaseType | null> {
+    await mongoConnect();
 
-  return cart;
-};
+    const cart = await CartModel.findOne({ userId }).populate('items.productId');
+
+    if (!cart || cart.items.length === 0) return null;
+
+    const purchase = new PurchaseModel({
+        userId,
+        items: cart.items,
+        purchaseDate: new Date(),
+    });
+
+    await purchase.save();
+
+    const user = await User.findById(userId);
+    user.purchaseHistory.push(purchase._id);
+    await user.save();
+
+    await CartModel.deleteOne({ userId });
+
+    return purchase;
+}

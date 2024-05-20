@@ -1,7 +1,7 @@
-// models/cart.model.js
+// models/purchase.model.js
 import { Schema, model, models } from 'mongoose';
 
-const CartSchema = new Schema({
+const PurchaseSchema = new Schema({
     userId: {
         type: Schema.Types.ObjectId,
         ref: 'User',
@@ -17,12 +17,15 @@ const CartSchema = new Schema({
             quantity: {
                 type: Number,
                 required: true,
-                default: 1,
             },
         },
     ],
+    purchaseDate: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
-const Cart = models.Cart || model('Cart', CartSchema);
+const Purchase = models.Purchase || model('Purchase', PurchaseSchema);
 
-export default Cart;
+export default Purchase;
