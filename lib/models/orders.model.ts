@@ -9,9 +9,12 @@ const orderSchema = new Schema({
         titulo: { type: String, required: true },
         precio: { type: Number, required: true },
         foto: { type: String, required: true },
-        cantidad: {type: Number, required: true, min: 1 }
+        cantidad: { type: Number, required: true, min: 1 }
     }],
     precio_total: { type: Number, required: true, min: 1 }
+}, {
+    toObject: { virtuals: true }, // Asegurarse de que se convierta a objeto plano
+    toJSON: { virtuals: true }
 });
 
 const Order = models.Order || model("Order", orderSchema);

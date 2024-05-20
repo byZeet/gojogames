@@ -1,6 +1,10 @@
+.custom-margin-button-games {
+  margin-left: 1.5rem;
+}
+
 .ui-bookmark-game {
   --icon-size: 24px;
-  --icon-secondary-color: black;
+  --icon-secondary-color: rgb(255, 255, 255);
   --icon-hover-color: rgb(252, 54, 54);
   --icon-primary-color: rgb(252, 54, 54);
   --icon-circle-border: 1px solid var(--icon-primary-color);

@@ -53,7 +53,7 @@ const OfertsGame = () => {
 
   const handleAddToCart = (juego: Juego) => {
     if (!user) {
-      toast.error('Por favor, regístrate primero.');
+      toast.error('Por favor, inicia sesión para añadir artículos al carrito.');
       return;
     }
 
@@ -83,7 +83,6 @@ const OfertsGame = () => {
     setCartItems(updatedCart);
     localStorage.setItem('cart', JSON.stringify(updatedCart));
     window.dispatchEvent(new Event('storage'));
-    toast.success(`${juego.titulo} se ha añadido correctamente al carrito.`);
   };
 
   const handleRemoveFromCart = (juego: Juego) => {
@@ -92,7 +91,6 @@ const OfertsGame = () => {
     localStorage.setItem('cart', JSON.stringify(updatedCart));
     window.dispatchEvent(new Event('storage'));
     window.dispatchEvent(new CustomEvent('cart-updated', { detail: { removedItem: juego } }));
-    toast.success(`${juego.titulo} se ha eliminado del carrito.`);
   };
 
   return (

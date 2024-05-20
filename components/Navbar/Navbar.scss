@@ -23,6 +23,10 @@
   transform: scale(0.98);
 }
 
+.custom-hover-dropdown:hover {
+  background-color: #1C2024;
+}
+
 .w-custom-dropdown {
   width: 800px;
 }
@@ -182,5 +186,3 @@
   display: inline-block;
   margin: 0 16px;
 }
-
- 
