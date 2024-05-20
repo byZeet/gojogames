@@ -7,6 +7,7 @@ import gojogameslogo from '../../public/assets/img/gojogameslogo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faTrash, faPlus, faMinus, faShoppingCart, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { getJuegosBuscar } from '@/lib/actions/juegos.actions';
+import { createOrders } from '@/lib/actions/orders.actions'; // Importa la función createOrders
 import search from '../../public/assets/icons/search-svgrepo-com.svg';
 import deleteicon from '../../public/assets/icons/delete-svgrepo-com.svg';
 import { toast } from 'react-toastify';
@@ -37,6 +38,7 @@ export default function Navbar() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { user } = useUser();
+  const clerkId = user?.id || ''; // Asegurarse de que clerkId es un string
   const [isClient, setIsClient] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -157,18 +159,38 @@ export default function Navbar() {
     return cartItems.reduce((total, item) => total + (item.precio * item.cantidad), 0).toFixed(2);
   };
 
-  const handlePayment = () => {
+  const handlePayment = async () => {
+    if (!clerkId) {
+      toast.error('Usuario no autenticado.');
+      return;
+    }
+
+    const compra_juego = cartItems.map(item => ({
+      titulo: item.titulo,
+      precio: item.precio,
+      foto: item.foto,
+      cantidad: item.cantidad
+    }));
+    const precio_total = parseFloat(calculateTotalPrice());
+
     setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-      setIsPaymentSuccess(true);
-      setCartItems([]);
-      localStorage.removeItem('cart');
-      window.dispatchEvent(new Event('storage'));
+    try {
+      await createOrders(clerkId, compra_juego, precio_total);
       setTimeout(() => {
-        setIsPaymentSuccess(false);
-      }, 3000);
-    }, 4000);
+        setIsLoading(false);
+        setIsPaymentSuccess(true);
+        setCartItems([]);
+        localStorage.removeItem('cart');
+        window.dispatchEvent(new Event('storage'));
+        setTimeout(() => {
+          setIsPaymentSuccess(false);
+        }, 3000);
+      }, 4000);
+    } catch (error) {
+      console.error(error);
+      toast.error('Error realizando el pago. Por favor, inténtelo de nuevo.');
+      setIsLoading(false);
+    }
   };
 
   if (!isClient) return null; // Evitar renderización en el servidor
@@ -315,8 +337,8 @@ export default function Navbar() {
                               </div>
                               <div className="sticky bottom-0 left-0 right-0 bg-[#292929] bg-opacity-95 text-white backdrop-blur-lg backdrop-saturate-100 py-4 px-6">
                                 <p className="text-right text-white font-semibold">Total: {calculateTotalPrice()}€</p>
-                                <button className="w-full bg-blue-500 text-white hover:bg-white hover:text-black py-2 rounded-lg mt-2" onClick={handlePayment}>
-                                  Realizar Pago
+                                <button className="w-full bg-blue-500 text-white hover:bg-white hover:text-black py-2 rounded-lg mt-2" onClick={handlePayment} disabled={isLoading}>
+                                  {isLoading ? "Procesando..." : "Realizar Pago"}
                                 </button>
                               </div>
                             </>
@@ -365,3 +387,6 @@ export default function Navbar() {
     </main>
   );
 }
+
+
+// CAMBIO AQUI

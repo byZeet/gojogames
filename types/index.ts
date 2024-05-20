@@ -1,5 +1,4 @@
-// types/index.ts
-import { ObjectId } from 'mongoose';
+import { Types } from "mongoose";
 
 export interface Juego {
   _id: string;
@@ -20,22 +19,11 @@ export interface Juego {
 }
 
 export interface CartItem {
-  productId: ObjectId;
+  productId: Juego;
   quantity: number;
 }
 
 export interface Cart {
-  userId: ObjectId;
+  userId: string;
   items: CartItem[];
-}
-
-export interface PurchaseItem {
-  productId: ObjectId;
-  quantity: number;
-}
-
-export interface Purchase {
-  userId: ObjectId;
-  items: PurchaseItem[];
-  purchaseDate: Date;
 }
