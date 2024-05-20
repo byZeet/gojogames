@@ -201,7 +201,7 @@ export default function Navbar() {
     }
   };
 
-  if (!isClient) return null; // Evitar renderización en el servidor
+  if (!isClient) return null;
 
   return (
     <main>
@@ -326,10 +326,12 @@ export default function Navbar() {
                                 <path d="M2 3L2.26121 3.09184C3.5628 3.54945 4.2136 3.77826 4.58584 4.32298C4.95808 4.86771 4.95808 5.59126 4.95808 7.03836V9.76C4.95808 12.7016 5.02132 13.6723 5.88772 14.5862C6.75412 15.5 8.14857 15.5 10.9375 15.5H12M16.2404 15.5C17.8014 15.5 18.5819 15.5 19.1336 15.0504C19.6853 14.6008 19.8429 13.8364 20.158 12.3075L20.6578 9.88275C21.0049 8.14369 21.1784 7.27417 20.7345 6.69708C20.2906 6.12 18.7738 6.12 17.0888 6.12H11.0235M4.95808 6.12H7" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path>
                               </svg>
                               <p className="text-white text-lg mt-4">Carrito vacío</p>
-                              <button className="w-full bg-blue-500 text-white hover:bg-blue-600 py-2 rounded-lg mt-4 flex justify-center items-center">
-                                <FontAwesomeIcon icon={faClipboardList} className="mr-2" />
-                                <span>Mis Pedidos</span>
-                              </button>
+                              <Link className='w-full' href="/myorders">
+                                <button className="w-full bg-blue-500 text-white hover:bg-blue-600 py-2 rounded-lg mt-4 flex justify-center items-center">
+                                  <FontAwesomeIcon icon={faClipboardList} className="mr-2" />
+                                  <span>Mis Pedidos</span>
+                                </button>
+                              </Link>
                             </div>
                           ) : (
                             <>
@@ -379,10 +381,12 @@ export default function Navbar() {
                                     </>
                                   )}
                                 </button>
-                                <button className="w-full bg-blue-500 text-white hover:bg-blue-600 py-2 rounded-lg mt-2 flex justify-center items-center">
-                                  <FontAwesomeIcon icon={faClipboardList} className="mr-2" />
-                                  <span>Mis Pedidos</span>
-                                </button>
+                                <Link href="/myorders">
+                                  <button className="w-full bg-blue-500 text-white hover:bg-blue-600 py-2 rounded-lg mt-2 flex justify-center items-center">
+                                    <FontAwesomeIcon icon={faClipboardList} className="mr-2" />
+                                    <span>Mis Pedidos</span>
+                                  </button>
+                                </Link>
                               </div>
                             </>
                           )}
