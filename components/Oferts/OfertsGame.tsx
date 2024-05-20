@@ -258,7 +258,7 @@ const OfertsGame = () => {
                           </div>
                         )}
                       </div>
-                      <div className="flex gap-3 px-10 ">
+                      <div className="flex gap-3">
                         <label className="ui-bookmark">
                           <input type="checkbox" />
                           <div className="bookmark">

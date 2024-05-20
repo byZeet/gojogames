@@ -67,7 +67,7 @@ export const Betagames = () => {
   };
 
   return (
-    <main className='betagames-container mb-20 w-full h-full' style={{ zIndex: "9999" }}>
+    <main className='betagames-container mt-28 mb-20 w-full h-full' style={{ zIndex: "9999" }}>
       <div className='container-general-beta flex flex-col md:flex-row'>
         <div className='left-section flex justify-center items-center'>
           <div className='controller-container'>

@@ -5,12 +5,12 @@ import { UserButton, useUser } from '@clerk/nextjs';
 import Image from 'next/image';
 import gojogameslogo from '../../public/assets/img/gojogameslogo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes, faTrash, faPlus, faMinus, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faTrash, faPlus, faMinus, faShoppingCart, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { getJuegosBuscar } from '@/lib/actions/juegos.actions';
 import search from '../../public/assets/icons/search-svgrepo-com.svg';
 import deleteicon from '../../public/assets/icons/delete-svgrepo-com.svg';
 import { toast } from 'react-toastify';
-import './Navbar.scss'
+import './Navbar.scss';
 
 interface Juego {
   _id: string;
@@ -39,6 +39,8 @@ export default function Navbar() {
   const { user } = useUser();
   const [isClient, setIsClient] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isPaymentSuccess, setIsPaymentSuccess] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -155,6 +157,20 @@ export default function Navbar() {
     return cartItems.reduce((total, item) => total + (item.precio * item.cantidad), 0).toFixed(2);
   };
 
+  const handlePayment = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsPaymentSuccess(true);
+      setCartItems([]);
+      localStorage.removeItem('cart');
+      window.dispatchEvent(new Event('storage'));
+      setTimeout(() => {
+        setIsPaymentSuccess(false);
+      }, 3000);
+    }, 4000);
+  };
+
   if (!isClient) return null; // Evitar renderización en el servidor
 
   return (
@@ -249,51 +265,81 @@ export default function Navbar() {
                           <FontAwesomeIcon icon={faTimes} />
                         </button>
                       </div>
-                      {cartItems.length === 0 ? (
-                        <div className="flex flex-col items-center">
-                          <FontAwesomeIcon icon={faShoppingCart} className="h-12 w-12 text-white" />
-                          <p className="text-white mt-2">Carrito vacío</p>
+                      {isPaymentSuccess ? (
+                        <div className="flex flex-col items-center my-4">
+                          <FontAwesomeIcon icon={faCheckCircle} className="h-8 w-8 text-green-500" />
+                          <p>Pago realizado con éxito</p>
                         </div>
                       ) : (
                         <>
-                          <div className="overflow-y-auto max-h-[400px]">
-                            {cartItems.map((item, index) => (
-                              <div key={index} className="flex items-center gap-4 py-2 px-2 cursor-pointer hover:bg-gray-700 rounded-lg">
-                                <div className="w-20 h-20 relative">
-                                  <img src={item.foto} alt={item.titulo} className="object-cover w-full h-full rounded-md" />
-                                </div>
-                                <div className="flex-1 flex flex-col justify-between">
-                                  <p className="font-semibold text-white">{item.titulo}</p>
-                                  <p className={`font-semibold ${item.oferta ? 'text-green-500' : 'text-white'}`}>{(item.precio * item.cantidad).toFixed(2)}€</p>
-                                </div>
-                                <div className="flex items-center">
-                                  <button
-                                    className="text-white hover:text-blue-500 transition-colors duration-300 mx-1"
-                                    onClick={() => handleDecreaseQuantity(index)}
-                                  >
-                                    <FontAwesomeIcon icon={faMinus} />
-                                  </button>
-                                  <p className="text-white mx-2">{item.cantidad}</p>
-                                  <button
-                                    className="text-white hover:text-blue-500 transition-colors duration-300 mx-1"
-                                    onClick={() => handleIncreaseQuantity(index)}
-                                  >
-                                    <FontAwesomeIcon icon={faPlus} />
-                                  </button>
-                                  <button
-                                    className="text-white hover:text-red-500 transition-colors duration-300 ml-2"
-                                    onClick={() => handleRemoveFromCart(index)}
-                                  >
-                                    <FontAwesomeIcon icon={faTrash} />
-                                  </button>
-                                </div>
+                          {cartItems.length === 0 ? (
+                            <div className="flex flex-col items-center">
+                              <FontAwesomeIcon icon={faShoppingCart} className="h-12 w-12 text-white" />
+                              <p className="text-white mt-2">Carrito vacío</p>
+                            </div>
+                          ) : (
+                            <>
+                              <div className="overflow-y-auto max-h-[400px]">
+                                {cartItems.map((item, index) => (
+                                  <div key={index} className="flex items-center gap-4 py-2 px-2 cursor-pointer hover:bg-gray-700 rounded-lg">
+                                    <div className="w-20 h-20 relative">
+                                      <img src={item.foto} alt={item.titulo} className="object-cover w-full h-full rounded-md" />
+                                    </div>
+                                    <div className="flex-1 flex flex-col justify-between">
+                                      <p className="font-semibold text-white">{item.titulo}</p>
+                                      <p className={`font-semibold ${item.oferta ? 'text-green-500' : 'text-white'}`}>{(item.precio * item.cantidad).toFixed(2)}€</p>
+                                    </div>
+                                    <div className="flex items-center">
+                                      <button
+                                        className="text-white hover:text-blue-500 transition-colors duration-300 mx-1"
+                                        onClick={() => handleDecreaseQuantity(index)}
+                                      >
+                                        <FontAwesomeIcon icon={faMinus} />
+                                      </button>
+                                      <p className="text-white mx-2">{item.cantidad}</p>
+                                      <button
+                                        className="text-white hover:text-blue-500 transition-colors duration-300 mx-1"
+                                        onClick={() => handleIncreaseQuantity(index)}
+                                      >
+                                        <FontAwesomeIcon icon={faPlus} />
+                                      </button>
+                                      <button
+                                        className="text-white hover:text-red-500 transition-colors duration-300 ml-2"
+                                        onClick={() => handleRemoveFromCart(index)}
+                                      >
+                                        <FontAwesomeIcon icon={faTrash} />
+                                      </button>
+                                    </div>
+                                  </div>
+                                ))}
                               </div>
-                            ))}
-                          </div>
-                          <div className="sticky bottom-0 left-0 right-0 bg-[#292929] bg-opacity-95 text-white backdrop-blur-lg backdrop-saturate-100 py-4 px-6">
-                            <p className="text-right text-white font-semibold">Total: {calculateTotalPrice()}€</p>
-                            <button className="w-full bg-blue-500 text-white hover:bg-white hover:text-black py-2 rounded-lg mt-2">Realizar Pago</button>
-                          </div>
+                              <div className="sticky bottom-0 left-0 right-0 bg-[#292929] bg-opacity-95 text-white backdrop-blur-lg backdrop-saturate-100 py-4 px-6">
+                                <p className="text-right text-white font-semibold">Total: {calculateTotalPrice()}€</p>
+                                <button className="w-full bg-blue-500 text-white hover:bg-white hover:text-black py-2 rounded-lg mt-2" onClick={handlePayment}>
+                                  Realizar Pago
+                                </button>
+                              </div>
+                            </>
+                          )}
+                          {isLoading && (
+                            <div className="flex justify-center items-center my-4">
+                              <div className="loader">
+                                <svg viewBox="0 0 80 80">
+                                  <circle id="test" cx="40" cy="40" r="32"></circle>
+                                </svg>
+                              </div>
+                              <div className="loader triangle">
+                                <svg viewBox="0 0 86 80">
+                                  <polygon points="43 8 79 72 7 72"></polygon>
+                                </svg>
+                              </div>
+                              <div className="loader">
+                                <svg viewBox="0 0 80 80">
+                                  <rect x="8" y="8" width="64" height="64"></rect>
+                                </svg>
+                              </div>
+                            </div>
+                          )}
                         </>
                       )}
                     </div>

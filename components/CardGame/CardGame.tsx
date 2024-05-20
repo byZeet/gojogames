@@ -241,7 +241,7 @@ const CardGame: React.FC = () => {
                       <div className="flex flex-column items-end gap-3 align-self-end">
                         <h1 className="text-neutral-100 font-medium">{juego.precio}€</h1>
                       </div>
-                      <div className="flex gap-3 px-10">
+                      <div className="flex gap-3">
                         <label className="ui-bookmark">
                           <input type="checkbox" />
                           <div className="bookmark">
