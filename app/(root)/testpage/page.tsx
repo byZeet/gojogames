@@ -7,7 +7,7 @@ const DashboardPage = () => {
   return (
     <main>
 
-      <h1>Dashboard</h1>
+      <h1>TestPage</h1>
 
       <div className='text-right'>
 
