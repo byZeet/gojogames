@@ -66,7 +66,7 @@ const generateInvoice = (order: any) => {
   doc.save(`Factura_${order._id}.pdf`);
 };
 
-export const Orders = () => {
+const Orders = () => {
   const { user } = useUser();
   const clerkId = user?.id || '';
   const [orders, setOrders] = useState<any[]>([]);
