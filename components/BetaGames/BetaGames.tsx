@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -7,7 +7,7 @@ import controllerwhite from '../../public/assets/img/controllerwhite.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import './BetaGames.scss';
-import gojogameslogo from '../../public/assets/img/gojogameslogo.png';
+import gojogameslogo from '../../public/assets/img/gojogameslogo.png'
 
 export const Betagames = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -43,34 +43,27 @@ export const Betagames = () => {
     setShowPopup(false);
   };
 
-  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    // Activar el loader
     setShowLoader(true);
-
-    try {
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userId, email, betaCode }),
-      });
-
-      const result = await response.json();
-      if (response.ok) {
-        setSuccessMessage('Registrado con éxito');
-      } else {
-        setSuccessMessage(`Error: ${result.message}`);
-      }
-    } catch (error) {
-      setSuccessMessage('Error enviando el correo');
-    } finally {
-      setShowLoader(false);
+    // Simular un retraso de 2 segundos antes de mostrar el mensaje de éxito
+    setTimeout(() => {
+      setSuccessMessage('Registrado con éxito');
+      // Desactivar el loader después de 2 segundos
       setTimeout(() => {
+        setShowLoader(false);
         setSuccessMessage('');
-        setShowPopup(false);
+        setShowPopup(false); // Ocultar el popup después de mostrar el mensaje de éxito
       }, 2000);
-    }
+    }, 2000);
+    // Aquí puedes hacer lo que necesites con los datos del formulario (userId, email y betaCode)
+    console.log('ID de usuario:', userId);
+    console.log('Correo electrónico:', email);
+    console.log('Código BETA:', betaCode);
+    // Aquí enviar los datos al servidor, por ejemplo, o hacer cualquier otra acción necesaria
+    // Luego cerrar el popup
+    // setShowPopup(false); // Cerrar el popup automáticamente o dejarlo abierto
   };
 
   return (
@@ -85,14 +78,14 @@ export const Betagames = () => {
           </div>
         </div>
         <div className='right-section mt-2 mb-2 flex justify-evenly gap-10 items-center flex-col'>
-          <div className="w-fit md:w-auto">
+          <div className="w-fit md:w-auto"> {/* Se ajusta el tamaño del contenedor de texto en dispositivos móviles */}
             <h1 className="text-2xl text-center">¡Únete a los programas BETA de nuestros juegos y sé parte del proceso de desarrollo!</h1>
           </div>
           <button className="button" onClick={handleJoinNowClick}><span>Únete Ahora</span></button>
-          <div className='w-fit md:w-auto'>
+          <div className='w-fit md:w-auto'> {/* Se ajusta el tamaño del contenedor de texto en dispositivos móviles */}
             <p className="overflow-wrap break-word">¡Hazte escuchar y sé parte del futuro de la diversión virtual ahora!</p>
           </div>
-          <div className='w-fit md:w-auto custom-beta-message'>
+          <div className='w-fit md:w-auto custom-beta-message'> {/* Se ajusta el tamaño del contenedor de texto en dispositivos móviles */}
             <p><span className="font-bold">NUEVO</span> PROGRAMA BETA GAMES</p>
           </div>
         </div>
