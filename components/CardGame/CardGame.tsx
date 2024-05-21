@@ -164,8 +164,8 @@ const CardGame: React.FC = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       className="cursor-pointer"
                       onClick={() => isInCart ? handleRemoveFromCart(juego) : handleAddToCart(juego)}
-                      width={25}
-                      height={25}
+                      width={30}
+                      height={30}
                     >
                       {isInCart ? (
                         <>

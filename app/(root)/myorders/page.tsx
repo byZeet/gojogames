@@ -1,5 +1,3 @@
-// src/components/Orders.tsx
-
 'use client';
 import React, { useState, useEffect } from 'react';
 import { useUser } from '@clerk/nextjs';
@@ -10,19 +8,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import arrowleft from '../../../public/assets/icons/arrow-prev-small-svgrepo-com.svg'; // Asegúrate de tener la ruta correcta para la imagen
 import './Orders.scss';
-
-const Loader = () => (
-  <div className="loader-wrapper">
-    <div className="wrapper">
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="shadow"></div>
-      <div className="shadow"></div>
-      <div className="shadow"></div>
-    </div>
-  </div>
-);
 
 const formatPrice = (num: number) => {
   return num.toFixed(2);
@@ -73,26 +58,20 @@ const Orders = () => {
   const { user } = useUser();
   const clerkId = user?.id || '';
   const [orders, setOrders] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchOrders = async () => {
       if (!clerkId) return;
-      setIsLoading(true);
       try {
         const userOrders = await getOrdersByClerkId(clerkId);
         setOrders(userOrders);
       } catch (error) {
         console.error(error);
-      } finally {
-        setIsLoading(false);
       }
     };
 
     fetchOrders();
   }, [clerkId]);
-
-  if (isLoading) return <Loader />;
 
   return (
     <main className="min-h-screen bg-[#151515] py-20">
