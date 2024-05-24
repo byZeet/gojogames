@@ -90,7 +90,7 @@ export const Betagames = () => {
       </div>
 
       {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center overflow-hidden bg-black bg-opacity-80 z-50">
+        <div className="fixed inset-0 flex items-center justify-center overflow-hidden mt-16 bg-black bg-opacity-80 z-50">
           <div className="max-w-3xl p-4 bg-cutom-betagames rounded-lg shadow-xl relative flex flex-col items-center w-full mx-4">
             <button className="absolute top-2 right-3 text-gray-500 hover:text-red-600" onClick={handlePopupClose}>
               <FontAwesomeIcon icon={faTimes} />

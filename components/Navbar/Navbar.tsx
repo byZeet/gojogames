@@ -143,19 +143,6 @@ export default function Navbar() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  useEffect(() => {
-    const handleCartUpdated = () => {
-      const storedCartItems = JSON.parse(localStorage.getItem('cart') || '[]') as CartItem[];
-      setCartItems(storedCartItems);
-    };
-
-    window.addEventListener('cart-updated-navbar', handleCartUpdated);
-
-    return () => {
-      window.removeEventListener('cart-updated-navbar', handleCartUpdated);
-    };
-  }, []);
-
   const handleIncreaseQuantity = (index: number) => {
     const updatedCart = [...cartItems];
     if (updatedCart.reduce((acc, item) => acc + item.cantidad, 0) < 10) {
@@ -223,15 +210,19 @@ export default function Navbar() {
   return (
     <main>
       <div className={`fixed top-0 left-0 w-full z-[999] transition-all duration-300 flex justify-between items-center px-8 py-2 ${isTop ? 'bg-transparent' : 'bg-[#151515] bg-opacity-75 backdrop-blur-lg backdrop-saturate-100'}`}>
-        <div className="relative flex items-center gap-4 lg:hidden">
+        <div className="flex items-center gap-4 lg:hidden">
           <button className="btn btn-ghost btn-circle" onClick={() => setIsSideNavOpen(!isSideNavOpen)}>
             <FontAwesomeIcon icon={faBars} className="h-6 w-6 text-white" />
-            {cartItems.length > 0 && (
-              <span className="absolute bottom-0 right-0 h-2 w-2 bg-blue-500 rounded-full notification-burguer"></span>
-            )}
           </button>
+          {!user && (
+            <Link href="/sign-in">
+              <button className="button-nav">
+                Sign in
+              </button>
+            </Link>
+          )}
         </div>
-        <div className="flex justify-center items-center flex-grow lg:flex-grow-0">
+        <div className="flex justify-center items-center gap-1">
           <Link href="/">
             <button className="btn btn-ghost text-xl">
               <Image src={gojogameslogo} alt="logogojogames" width={60} height={60} />
@@ -451,6 +442,18 @@ export default function Navbar() {
               <FontAwesomeIcon icon={faTimes} className="h-6 w-6 text-white" />
             </button>
             <div className="flex flex-col items-center mt-10 w-full">
+              {!user && (
+                <Link href="/sign-in">
+                  <button className="button-nav mb-4">
+                    Sign in
+                  </button>
+                </Link>
+              )}
+              {user && (
+                <div className="mb-5">
+                  <UserButton />
+                </div>
+              )}
               <form className="relative flex items-center w-full px-4 mb-4">
                 <button className="absolute left-8">
                   <Image src={search} alt="search-icon" width={20} height={20} />
@@ -638,4 +641,5 @@ export default function Navbar() {
     </main>
   );
 }
+
 

@@ -94,7 +94,7 @@ const OfertsGame = () => {
   };
 
   return (
-    <main className="px-4 md:px-32">
+    <main className="px-8 md:px-32">
       <div className="flex gap-1 mb-5 mt-20 items-center title-category">
         <Link href="/">
           <h1 className="text-3xl">Ofertas</h1>
