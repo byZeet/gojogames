@@ -186,3 +186,20 @@
   display: inline-block;
   margin: 0 16px;
 }
+
+.notification-circle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background-color: #3B82F6;
+  border-radius: 50%;
+}
+
+.notification-burguer{
+  left: 25px;
+  top: 7px;
+  width: 15px;
+  height: 15px;
+}
