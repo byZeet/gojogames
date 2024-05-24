@@ -5,18 +5,18 @@ import './CardCategory.scss';
 /**
   * WALLPAPERS IMPORTS
 */
-import wallpaperaccion from '../../public/assets/img/wallpaperaccion.png'
+import wallpaperaccion from '../../public/assets/img/wallpaperaccion.webp'
 import wallpaperarcade from '../../public/assets/img/wallpaperarcade.svg'
-import wallpaperaventura from '../../public/assets/img/wallpaperaventura.png'
-import wallpapercoop from '../../public/assets/img/wallpapercoop.png'
-import wallpaperfps from '../../public/assets/img/wallpaperfps.png'
-import wallpaperindie from '../../public/assets/img/wallpaperindie.webp'
-import wallpaperlucha from '../../public/assets/img/wallpaperlucha.png'
-import wallpaperrpg from '../../public/assets/img/wallpaperrpg.png'
+import wallpaperaventura from '../../public/assets/img/wallpaperaventura.webp'
+import wallpapercoop from '../../public/assets/img/wallpapercoop.webp'
+import wallpaperfps from '../../public/assets/img/wallpaperfps.webp'
+import wallpaperindie from '../../public/assets/img/wallpaperindie.avif'
+import wallpaperlucha from '../../public/assets/img/wallpaperlucha.webp'
+import wallpaperrpg from '../../public/assets/img/wallpaperrpg.webp'
 import wallpapersimulacion from '../../public/assets/img/wallpapersimulacion.svg'
-import wallpaperdeporte from '../../public/assets/img/wallpaperdeportes.webp'
-import wallpapermmo from '../../public/assets/img/wallpapermmo.webp'
-import wallpapergestion from '../../public/assets/img/wallpapergestion.webp'
+import wallpaperdeporte from '../../public/assets/img/wallpaperdeportes.avif'
+import wallpapermmo from '../../public/assets/img/wallpapermmo.avif'
+import wallpapergestion from '../../public/assets/img/wallpapergestion.avif'
 /**
   * IMAGE IMPORTS
 */
@@ -25,13 +25,13 @@ import arcademain from '../../public/assets/img/arcademain.svg'
 import aventuramain from '../../public/assets/img/aventuramain.svg'
 import coopmain from '../../public/assets/img/coopmain.svg'
 import fpsmain from '../../public/assets/img/fpsmain.svg'
-import indiesmain from '../../public/assets/img/indiesmain.png'
+import indiesmain from '../../public/assets/img/indiesmain.webp'
 import luchamain from '../../public/assets/img/luchamain.svg'
 import rpgmain from '../../public/assets/img/rpgmain.svg'
-import gestionmain from '../../public/assets/img/gestionmain.png'
-import deportemain from '../../public/assets/img/deportemain.png'
+import gestionmain from '../../public/assets/img/gestionmain.webp'
+import deportemain from '../../public/assets/img//deportemain.webp'
 import simulacionmain from '../../public/assets/img/simulacionmain.svg'
-import mmonmain from '../../public/assets/img/mmomain.png'
+import mmonmain from '../../public/assets/img/mmomain.webp'
 import arrowright from '../../public/assets/icons/arrow-next-small-svgrepo-com.svg'
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import wallpaper2 from '../../public/assets/img/wallpaper2.jpg';
+import wallpaper2 from '../../public/assets/img/wallpaper2.webp';
 import './Slider.scss';
 
 export const Slider = () => {

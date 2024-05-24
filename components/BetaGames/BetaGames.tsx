@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import controllerblack from '../../public/assets/img/controllerblack.png';
-import controllerwhite from '../../public/assets/img/controllerwhite.png';
+import controllerblack from '../../public/assets/img/controllerblack.webp';
+import controllerwhite from '../../public/assets/img/controllerwhite.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import './BetaGames.scss';

@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShare } from '@fortawesome/free-solid-svg-icons';
 import './ReviewsGame.scss'
 import Image from 'next/image';
-import Image1 from '../../public/assets/img/Card_Image_1.jpg'
-import Image2 from '../../public/assets/img/Card_Image_2.jpg'
-import Image3 from '../../public/assets/img/Card_Image_3.jpg'
-import Image4 from '../../public/assets/img/Card_Image_4.jpg'
-import Image5 from '../../public/assets/img/Card_Image_5.jpg'
+import Image1 from '../../public/assets/img/Card_Image_1.webp'
+import Image2 from '../../public/assets/img/Card_Image_2.webp'
+import Image3 from '../../public/assets/img/Card_Image_3.webp'
+import Image4 from '../../public/assets/img/Card_Image_4.webp'
+import Image5 from '../../public/assets/img/Card_Image_5.webp'
 
 export const ReviewsGame = () => {
   return (
