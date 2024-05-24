@@ -10,13 +10,13 @@ import wallpaperarcade from '../../public/assets/img/wallpaperarcade.svg'
 import wallpaperaventura from '../../public/assets/img/wallpaperaventura.png'
 import wallpapercoop from '../../public/assets/img/wallpapercoop.png'
 import wallpaperfps from '../../public/assets/img/wallpaperfps.png'
-import wallpaperindie from '../../public/assets/img/wallpaperindie.svg'
+import wallpaperindie from '../../public/assets/img/wallpaperindie.webp'
 import wallpaperlucha from '../../public/assets/img/wallpaperlucha.png'
 import wallpaperrpg from '../../public/assets/img/wallpaperrpg.png'
 import wallpapersimulacion from '../../public/assets/img/wallpapersimulacion.svg'
-import wallpaperdeporte from '../../public/assets/img/wallpaperdeporte.png'
-import wallpapermmo from '../../public/assets/img/wallpapermmo.png'
-import wallpapergestion from '../../public/assets/img/wallpapergestion.svg'
+import wallpaperdeporte from '../../public/assets/img/wallpaperdeportes.webp'
+import wallpapermmo from '../../public/assets/img/wallpapermmo.webp'
+import wallpapergestion from '../../public/assets/img/wallpapergestion.webp'
 /**
   * IMAGE IMPORTS
 */
@@ -25,12 +25,13 @@ import arcademain from '../../public/assets/img/arcademain.svg'
 import aventuramain from '../../public/assets/img/aventuramain.svg'
 import coopmain from '../../public/assets/img/coopmain.svg'
 import fpsmain from '../../public/assets/img/fpsmain.svg'
-import indiesmain from '../../public/assets/img/indiesmain.svg'
+import indiesmain from '../../public/assets/img/indiesmain.png'
 import luchamain from '../../public/assets/img/luchamain.svg'
 import rpgmain from '../../public/assets/img/rpgmain.svg'
 import gestionmain from '../../public/assets/img/gestionmain.png'
 import deportemain from '../../public/assets/img/deportemain.png'
 import simulacionmain from '../../public/assets/img/simulacionmain.svg'
+import mmonmain from '../../public/assets/img/mmomain.png'
 import arrowright from '../../public/assets/icons/arrow-next-small-svgrepo-com.svg'
 
 
@@ -89,7 +90,7 @@ export const CardCategory = () => {
           </div>
           {/* INDIES */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpaperindie} alt='foto-indie' width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpaperindie} alt='foto-indie' width={425} height={240} className="background-image wallpaper-indie rounded-lg"/>
             <div className="card-container custom-indies">
               <Image src={indiesmain} alt='foto-main-indie' className="foreground-image"/>
             </div>
@@ -139,7 +140,7 @@ export const CardCategory = () => {
           </div>
           {/* DEPORTE */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpaperdeporte} alt='foto-deporte' width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpaperdeporte} alt='foto-deporte' width={425} height={240} className="background-image wallpaper-deportes rounded-lg"/>
             <div className="card-container custom-deporte">
               <Image src={deportemain} alt='foto-main-deporte' className="foreground-image"/>
             </div>
@@ -149,7 +150,7 @@ export const CardCategory = () => {
           </div>
           {/* GESTIÓN */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpapergestion} alt='foto-gestion' width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpapergestion} alt='foto-gestion' width={425} height={240} className="background-image wallpaper-gestion rounded-lg"/>
             <div className="card-container custom-gestion">
               <Image src={gestionmain} alt='foto-main-gestion' className="foreground-image"/>
             </div>
@@ -159,9 +160,9 @@ export const CardCategory = () => {
           </div>
           {/* MMO */}
           <div className="image-container w-full sm:w-80 md:w-96">
-            <Image src={wallpapermmo} alt='foto-mmo' width={425} height={240} className="background-image rounded-lg"/>
+            <Image src={wallpapermmo} alt='foto-mmo' width={425} height={240} className="background-image wallpaper-mmo rounded-lg"/>
             <div className="card-container custom-mmo">
-              <Image src={coopmain} alt='foto-main-mmo' className="foreground-image"/>
+              <Image src={mmonmain} alt='foto-main-mmo' className="foreground-image"/>
             </div>
             <div className="text-container">
               <p>MMO</p>

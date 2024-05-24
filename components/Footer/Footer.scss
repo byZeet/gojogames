@@ -1,3 +1,38 @@
-.custom-gap-footer{
-    gap: 174px;
-}
+@media (max-width: 768px) {
+    .custom-gap-footer {
+      gap: 10px !important; /* Ajusta el gap para dispositivos móviles */
+      align-items: center; /* Centra los items */
+      text-align: center; /* Centra el texto */
+    }
+    .footer-container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px; /* Agrega gap a los elementos en la parte inferior */
+    }
+    .footer-selectors {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .footer-copyright {
+      text-align: center;
+    }
+  }
+  
+  .custom-gap-footer {
+    gap: 174px; /* Mantén el gap original para la versión de PC */
+  }
+  
+  .footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

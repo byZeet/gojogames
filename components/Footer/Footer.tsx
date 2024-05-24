@@ -36,10 +36,10 @@ export const Footer = () => {
 
   return (
     <main>
-      <div className='footer-container ' style={{ backgroundColor: '#1B1B1B' }}>
-        <div className='custom-gap-footer flex flex-col md:flex-row justify-center gap-5 w-full h-fit mt-20 pt-10 pl-20 pr-20 '>
+      <div className='footer-container' style={{ backgroundColor: '#1B1B1B' }}>
+        <div className='custom-gap-footer flex flex-col md:flex-row justify-center gap-5 w-full h-fit mt-20 pt-10 px-5 md:px-20'>
           <div className='gap-5'>
-            <h1 className=' text-xl'>Sobre GojoGames</h1>
+            <h1 className='text-xl'>Sobre GojoGames</h1>
             <div className='mt-3' style={{ color: '#7D7D7D' }}>
               <p>Sobre Nosotros</p>
               <p>Términos y Condiciones</p>
@@ -47,7 +47,7 @@ export const Footer = () => {
             </div>
           </div>
           <div>
-            <h1 className=' text-xl'>Productos</h1>
+            <h1 className='text-xl'>Productos</h1>
             <div className='mt-3' style={{ color: '#7D7D7D' }}>
               <p>Todos los productos</p>
               <p>Más vendidos</p>
@@ -55,7 +55,7 @@ export const Footer = () => {
             </div>
           </div>
           <div>
-            <h1 className=' text-xl'>Comunidad</h1>
+            <h1 className='text-xl'>Comunidad</h1>
             <div className='mt-3' style={{ color: '#7D7D7D' }}>
               <p>FAQ</p>
               <p>Contacto</p>
@@ -63,7 +63,7 @@ export const Footer = () => {
             </div>
           </div>
           <div>
-            <h1 className=' text-xl'>Métodos de pago</h1>
+            <h1 className='text-xl'>Métodos de pago</h1>
             <div className='flex mt-3 gap-2'>
               <div style={{ width: '50px', height: 'auto' }}>
                 <Image src={visa} alt='icono-visa' />
@@ -98,13 +98,10 @@ export const Footer = () => {
           </div>
         </div>
 
-        <hr className=" mx-20" style={{ color: '#7D7D7D' }} /> {/* Aquí se añade la línea divisoria */}
+        <hr className="mx-20" style={{ color: '#7D7D7D' }} /> {/* Aquí se añade la línea divisoria */}
         <div className='mx-20'>
-          <div className='flex flex-col md:flex-row justify-between mt-5 pb-5 custom-color-rg'>
-            <div className="md:order-1">
-              <h2 style={{ color: '#ffffff' }}>Copyright © 2024 GojoGames - All rights reserved</h2>
-            </div>
-            <div className='md:order-1 flex flex-col md:flex-row gap-2 justify-center md:justify-end'>
+          <div className='footer-bottom mt-5 pb-5 custom-color-rg'>
+            <div className='footer-selectors order-1 md:order-2 flex flex-row gap-5 justify-center items-center'>
               <div className="relative">
                 <div onClick={() => setDropdownOpen(!dropdownOpen)} className="cursor-pointer flex items-center gap-2">
                   <div style={{ width: '20px', height: 'auto' }}>
@@ -114,7 +111,6 @@ export const Footer = () => {
                 </div>
                 {dropdownOpen && (
                   <div className="absolute bg-neutral-800 shadow-md p-2 rounded-md bottom-8 right-0 z-10 overflow-y-auto max-h-80 w-56">
-                    {/* Aquí puedes agregar los otros países que se mostrarán en el desplegable */}
                     <div className="flex flex-col gap-1">
                       <div className='flex gap-1'>
                         <div style={{ width: '24px', height: 'auto' }}>
@@ -155,6 +151,9 @@ export const Footer = () => {
                 <Image src={currency} alt='icono-moneda' />
               </div>
               <h3 style={{ color: '#ffffff' }}>{selectedCurrency}</h3>
+            </div>
+            <div className="order-2 md:order-1 mt-4 md:mt-0 text-center md:text-left">
+              <h2 style={{ color: '#ffffff' }}>Copyright © 2024 GojoGames - All rights reserved</h2>
             </div>
           </div>
         </div>

@@ -75,19 +75,44 @@
     margin-bottom: -0.2%;
 }
 .custom-indies {
-    width: 65%;
+    width: 70%;
+    margin-bottom: -13px;
 }
+
+.wallpaper-indie{
+    opacity: 30%;
+    border-radius: 20px;
+}
+
 .custom-simulacion {
     left: 25%;
     bottom: -10%;
     width: 85%;
 }
+.custom-mmo {
+    width: 65%;
+    bottom: -1.8px;
+}
+
+.wallpaper-mmo{
+    opacity: 30%;
+    border-radius: 20px;
+}
 
 .custom-gestion {
     width: 62%;
 }
+
+.wallpaper-gestion {
+    opacity: 30%;
+    border-radius: 20px;
+}
 .custom-deporte {
-    width: 43%;
+    width: 65%;
+}
+.wallpaper-deportes {
+    opacity: 30%;
+    border-radius: 20px;
 }
 
 .image-container:hover .card-container,
