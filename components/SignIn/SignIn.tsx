@@ -1,4 +1,4 @@
-// Importa los estilos de DaisyUI en tu proyecto
+// Importa los estilos de DaisyUI
 import 'daisyui/dist/full.css';
 
 // Importa el componente SignIn de Clerk
@@ -7,7 +7,6 @@ import gojogameslogo from '../../public/assets/img/gojogameslogo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// Crea tu componente personalizado de SignIn
 export const SignIn = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-customDark py-12 px-4 sm:px-6 lg:px-8">

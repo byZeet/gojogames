@@ -18,7 +18,6 @@ export async function createOrders(clerkId: string, compra_juego: { titulo: stri
     }
 }
 
-
 export async function getOrdersByClerkId(clerkId: string) {
     try {
         await mongoConnect();

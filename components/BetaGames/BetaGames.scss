@@ -20,7 +20,7 @@
     position: relative;
     overflow: visible;
     width: 50%;
-    height: 330px; /* Reducir la altura del contenedor */
+    height: 330px;
   }
   .controllerwhite img {
     top: 200px;
@@ -28,10 +28,10 @@
 
   .controller-container img {
     position: absolute;
-    bottom: 0; /* Ajustar la posición inferior */
+    bottom: 0;
     width: 100%;
     height: auto;
-    object-fit: contain; /* Cambiar a "contain" para asegurarse de que la imagen se ajuste dentro del contenedor sin recortarla */
+    object-fit: contain;
     animation: moveUpDown 3s infinite ease-in-out;
   }
 
@@ -40,7 +40,7 @@
     top: -10%;
     width: 100%;
     height: auto;
-    object-fit: contain; /* Cambiar a "contain" para asegurarse de que la imagen se ajuste dentro del contenedor sin recortarla */
+    object-fit: contain;
     animation: moveUpDown 3s infinite ease-in-out;
   }
   
@@ -108,12 +108,12 @@
    }
 
    .card-beta {
-    width: 350px; /* Ajusta el ancho del card */
-    height: 300px; /* Ajusta la altura del card */
-    border-radius: 8px; /* Ajusta el radio de borde */
+    width: 350px;
+    height: 300px;
+    border-radius: 8px;
     display: flex;
-    flex-direction: column; /* Cambia a disposición vertical */
-    gap: 10px; /* Aumenta el espacio entre los elementos */
+    flex-direction: column;
+    gap: 10px;
     padding: 1em;
   }
   
@@ -134,14 +134,14 @@
   }
   
   .card-beta p span {
-    padding: 1em; /* Aumenta el relleno */
+    padding: 1em;
     text-align: center;
     transition: all 0.5s;
     text-transform: uppercase;
     color: #3B82F6;
     letter-spacing: 0.1em;
     white-space: nowrap;
-    font-size: 1.2em; /* Ajusta el tamaño del texto */
+    font-size: 1.2em;
   }
 
   .bg-cutom-betagames{
@@ -152,11 +152,11 @@
 
   
   .custom-select {
-    color: white; /* Texto en blanco */
-    border: 2px solid #333; /* Cambiar el borde y su grosor */
-    padding: 0.5rem; /* Ajustar el espacio interno */
-    border-radius: 0.375rem; /* Ajustar el radio de borde */
-    font-size: 1rem; /* Tamaño de fuente */
+    color: white;
+    border: 2px solid #333;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
   }
   
   .custom-select option {

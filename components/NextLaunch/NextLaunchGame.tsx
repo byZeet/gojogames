@@ -32,7 +32,6 @@ const NextLaunchGame = () => {
         <Image src={arrowright} alt="flecha-derecha-launch" width={36} height={36} />
       </div>
       <div className="flex w-full justify-center mb-10">
-        {/* Contenido adicional aquí */}
       </div>
       <div className="hidden md:grid justify-center items-center mb-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-2 gap-5">
         {juegos.map((juego: Juego, index: number) => (

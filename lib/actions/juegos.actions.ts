@@ -32,7 +32,6 @@ export async function getJuegosBuscar(busqueda: string) {
 };
 
 
-
 export async function getJuegosOferta() {
     try {
         await mongoConnect();

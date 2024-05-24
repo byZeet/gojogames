@@ -57,12 +57,10 @@ export const Betagames = () => {
         setShowPopup(false); // Ocultar el popup después de mostrar el mensaje de éxito
       }, 2000);
     }, 2000);
-    // Aquí puedes hacer lo que necesites con los datos del formulario (userId, email y betaCode)
     console.log('ID de usuario:', userId);
     console.log('Correo electrónico:', email);
     console.log('Código BETA:', betaCode);
     // Aquí enviar los datos al servidor, por ejemplo, o hacer cualquier otra acción necesaria
-    // Luego cerrar el popup
     // setShowPopup(false); // Cerrar el popup automáticamente o dejarlo abierto
   };
 

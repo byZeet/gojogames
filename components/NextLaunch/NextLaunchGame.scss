@@ -5,7 +5,7 @@
     border-radius: 20px;
     background-color: #3B82F6;
     width: 100%;
-    text-align: center; /* Agregar esta línea para centrar el texto */
+    text-align: center;
   }
   
 .custom-card-nextlaunch{
@@ -13,9 +13,9 @@
 }
 
   .container-nextlaunch {
-    --color: #ffcd02; /* Color blanco al principio */
-    --hover-color: #ffcd02; /* Color al hacer hover */
-    --solid-color: #ffffff; /* Nuevo color para el ícono sólido */
+    --color: #ffcd02;
+    --hover-color: #ffcd02;
+    --solid-color: #ffffff;
     --size: 24px;
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@
   
   .container-nextlaunch:hover,
   .container-nextlaunch input:checked ~ .bell-regular:hover {
-    fill: var(--hover-color); /* Cambiar el color al hacer hover */
+    fill: var(--hover-color);
   }
   
   .container-nextlaunch .bell-regular {
@@ -40,7 +40,7 @@
   }
   
   .container-nextlaunch input:checked ~ .bell-regular {
-    fill: var(--solid-color); /* Cambiar el color del ícono regular al hacer clic */
+    fill: var(--solid-color);
     display: block;
   }
   
