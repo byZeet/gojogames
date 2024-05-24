@@ -1,38 +1,60 @@
 @media (max-width: 768px) {
-    .custom-gap-footer {
-      gap: 10px !important; /* Ajusta el gap para dispositivos móviles */
-      align-items: center; /* Centra los items */
-      text-align: center; /* Centra el texto */
-    }
-    .footer-container {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    .footer-bottom {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 10px; /* Agrega gap a los elementos en la parte inferior */
-    }
-    .footer-selectors {
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-    .footer-copyright {
-      text-align: center;
-    }
-  }
-  
   .custom-gap-footer {
-    gap: 174px; /* Mantén el gap original para la versión de PC */
+    gap: 10px !important; /* Ajusta el gap para dispositivos móviles */
+    align-items: center; /* Centra los items */
+    text-align: center; /* Centra el texto */
   }
-  
+  .footer-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .footer-bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 10px; /* Agrega gap a los elementos en la parte inferior */
   }
-  
+  .footer-selectors-container {
+    order: 1; /* Ordena los selectores encima del copyright */
+  }
+  .footer-selectors {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas múltiples si es necesario */
+  }
+  .footer-copyright {
+    order: 2; /* Ordena el copyright debajo de los selectores */
+    text-align: center;
+  }
+}
+
+.custom-gap-footer {
+  gap: 174px; /* Mantén el gap original para la versión de PC */
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center;
+}
+
+.footer-selectors-container {
+  order: 2; /* Ordena los selectores a la derecha en PC */
+  display: flex;
+  justify-content: flex-end; /* Alinea los selectores a la derecha */
+  width: 100%; /* Asegura que ocupen el ancho completo */
+}
+
+.footer-selectors {
+  display: flex;
+  flex-wrap: nowrap; /* Mantiene los elementos en una sola línea en PC */
+}
+
+.footer-copyright {
+  order: 1; /* Ordena el copyright a la izquierda en PC */
+  text-align: left; /* Alinea el texto del copyright a la izquierda */
+  width: 100%; /* Asegura que ocupe el ancho completo */
+}

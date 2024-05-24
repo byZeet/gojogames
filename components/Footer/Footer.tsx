@@ -101,59 +101,60 @@ export const Footer = () => {
         <hr className="mx-20" style={{ color: '#7D7D7D' }} /> {/* Aquí se añade la línea divisoria */}
         <div className='mx-20'>
           <div className='footer-bottom mt-5 pb-5 custom-color-rg'>
-            <div className='footer-selectors order-1 md:order-2 flex flex-row gap-5 justify-center items-center'>
-              <div className="relative">
-                <div onClick={() => setDropdownOpen(!dropdownOpen)} className="cursor-pointer flex items-center gap-2">
-                  <div style={{ width: '20px', height: 'auto' }}>
-                    <Image src={location} alt='icono-location' />
+            <div className='footer-selectors-container flex flex-col md:flex-row md:justify-between gap-5 md:gap-0 w-full'>
+              <div className='footer-copyright order-2 md:order-1 text-center md:text-left'>
+                <h2 style={{ color: '#ffffff' }}>Copyright © 2024 GojoGames - All rights reserved</h2>
+              </div>
+              <div className='footer-selectors flex flex-row gap-2 justify-center items-center md:justify-end md:gap-5 order-1 md:order-2'>
+                <div className="relative">
+                  <div onClick={() => setDropdownOpen(!dropdownOpen)} className="cursor-pointer flex items-center gap-2">
+                    <div style={{ width: '20px', height: 'auto' }}>
+                      <Image src={location} alt='icono-location' />
+                    </div>
+                    <h3 style={{ color: '#ffffff' }}>{selectedCountry || 'Seleccionar país'}</h3>
                   </div>
-                  <h3 style={{ color: '#ffffff' }}>{selectedCountry || 'Seleccionar país'}</h3>
-                </div>
-                {dropdownOpen && (
-                  <div className="absolute bg-neutral-800 shadow-md p-2 rounded-md bottom-8 right-0 z-10 overflow-y-auto max-h-80 w-56">
-                    <div className="flex flex-col gap-1">
-                      <div className='flex gap-1'>
-                        <div style={{ width: '24px', height: 'auto' }}>
-                          <Image src={España} alt='icono-españa' />
+                  {dropdownOpen && (
+                    <div className="absolute bg-neutral-800 shadow-md p-2 rounded-md bottom-8 right-0 z-10 overflow-y-auto max-h-80 w-56">
+                      <div className="flex flex-col gap-1">
+                        <div className='flex gap-1'>
+                          <div style={{ width: '24px', height: 'auto' }}>
+                            <Image src={España} alt='icono-españa' />
+                          </div>
+                          <h3 onClick={() => handleCountrySelect('España', 'Español', 'EUR')} className={`cursor-pointer ${selectedCountry === 'España' ? 'text-white' : 'hover:text-white'}`}>España (EUR)</h3>
                         </div>
-                        <h3 onClick={() => handleCountrySelect('España', 'Español', 'EUR')} className={`cursor-pointer ${selectedCountry === 'España' ? 'text-white' : 'hover:text-white'}`}>España (EUR)</h3>
-                      </div>
-                      <div className="flex gap-1">
-                        <div style={{ width: '24px', height: 'auto' }}>
-                          <Image src={USA} alt='icono-usa' />
+                        <div className="flex gap-1">
+                          <div style={{ width: '24px', height: 'auto' }}>
+                            <Image src={USA} alt='icono-usa' />
+                          </div>
+                          <h3 onClick={() => handleCountrySelect('Estados Unidos', 'Inglés', 'USD')} className={`cursor-pointer ${selectedCountry === 'Estados Unidos' ? 'text-white' : 'hover:text-white'}`}>Estados Unidos (USD)</h3>
                         </div>
-                        <h3 onClick={() => handleCountrySelect('Estados Unidos', 'Inglés', 'USD')} className={`cursor-pointer ${selectedCountry === 'Estados Unidos' ? 'text-white' : 'hover:text-white'}`}>Estados Unidos (USD)</h3>
-                      </div>
-                      <div className="flex gap-1">
-                        <div style={{ width: '24px', height: 'auto' }}>
-                          <Image src={Reinounido} alt='icono-reinounido' />
+                        <div className="flex gap-1">
+                          <div style={{ width: '24px', height: 'auto' }}>
+                            <Image src={Reinounido} alt='icono-reinounido' />
+                          </div>
+                          <h3 onClick={() => handleCountrySelect('Reino Unido', 'Inglés', 'GBP')} className={`cursor-pointer ${selectedCountry === 'Reino Unido' ? 'text-white' : 'hover:text-white'}`}>Reino Unido (GBP)</h3>
                         </div>
-                        <h3 onClick={() => handleCountrySelect('Reino Unido', 'Inglés', 'GBP')} className={`cursor-pointer ${selectedCountry === 'Reino Unido' ? 'text-white' : 'hover:text-white'}`}>Reino Unido (GBP)</h3>
-                      </div>
-                      <div className="flex gap-1">
-                        <div style={{ width: '24px', height: 'auto' }}>
-                          <Image src={Japon} alt='icono-japon' />
+                        <div className="flex gap-1">
+                          <div style={{ width: '24px', height: 'auto' }}>
+                            <Image src={Japon} alt='icono-japon' />
+                          </div>
+                          <h3 onClick={() => handleCountrySelect('Japón', 'Japonés', 'JPY')} className={`cursor-pointer ${selectedCountry === 'Japón' ? 'text-white' : 'hover:text-white'}`}>Japón (JPY)</h3>
                         </div>
-                        <h3 onClick={() => handleCountrySelect('Japón', 'Japonés', 'JPY')} className={`cursor-pointer ${selectedCountry === 'Japón' ? 'text-white' : 'hover:text-white'}`}>Japón (JPY)</h3>
                       </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
+                <h3>| </h3>
+                <div style={{ width: '20px', height: 'auto' }}>
+                  <Image src={language} alt='icono-lenguaje' />
+                </div>
+                <h3 style={{ color: '#ffffff' }}>{selectedLanguage}</h3>
+                <h3>| </h3>
+                <div style={{ width: '20px', height: 'auto' }}>
+                  <Image src={currency} alt='icono-moneda' />
+                </div>
+                <h3 style={{ color: '#ffffff' }}>{selectedCurrency}</h3>
               </div>
-
-              <h3>| </h3>
-              <div style={{ width: '20px', height: 'auto' }}>
-                <Image src={language} alt='icono-lenguaje' />
-              </div>
-              <h3 style={{ color: '#ffffff' }}>{selectedLanguage}</h3>
-              <h3>| </h3>
-              <div style={{ width: '20px', height: 'auto' }}>
-                <Image src={currency} alt='icono-moneda' />
-              </div>
-              <h3 style={{ color: '#ffffff' }}>{selectedCurrency}</h3>
-            </div>
-            <div className="order-2 md:order-1 mt-4 md:mt-0 text-center md:text-left">
-              <h2 style={{ color: '#ffffff' }}>Copyright © 2024 GojoGames - All rights reserved</h2>
             </div>
           </div>
         </div>
